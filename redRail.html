@@ -5,139 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>redRail</title>
-    <style>
-        #nav{
-            width: 100%;
-            height: 70px;
-            display: flex;
-            gap: 30px;
-            background-color: #d84e55;
-            color: rgb(243, 243, 243);
-            font-family: "Montserrat";
-            font-size: 18px;
-            padding-top: 10px;
-            padding-left: 50px;
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-        }
-        #nav > a{
-            margin-top: 9px;
-            color: white;
-            text-decoration: none;
-        }
-        #block1{
-            width: 100%;
-            height: 40rem;
-            margin: auto;
-            text-align: center;
-            background-color: #d84e55;
-            margin-top: 5rem;
-        }
-        #block1 > div{
-            /* border:1px solid white; */
-            width: 75%;
-            margin: auto;
-            text-align: left;
-            color: white;
-            font-size: 25px;
-        }
-        #block2{
-            text-align: center;
-        }
-        #whybook{
-            width: 80%;
-            height: 14rem;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            border: 1px solid transparent;            
-        }
-        #whybook > div{
-            width: 16rem;
-            border: 1px solid transparent;
-            font-size: 19px;
-                        
-        }
-        #whybook > div > img{
-            width: 65px;
-            height: 65px;
-        }
-        #whybook > div > p{
-            margin-top: -15px;
-        }
-        #block3{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 0px;
-            background-color: #f7f7f7;
-        }
-        #list_wrap{
-            font-size: 16px;
-            line-height: 20px;
-            float: left;
-            width: 40%;
-            padding-left: 150px;
-        }
-        #list_wrap > div{
-            margin-bottom: 12px;
-            padding: 25px;
-            color: black;
-            background-color: white;
-            border: 1px solid #3E3E52;
-            border-radius: 8px;
-        }
-        #imgs{
-            width: 40rem;
-        }
-        #block4{
-            background: #FFFFFF;
-            padding: 48px 10%;
-            color: #3E3E52;
-        }
-        #block5{
-            padding: 3em 7em;
-            display: flex;
-            background: #1a2230;
-            color: #fff;
-        }
-        .left-block{
-            width: 70%;
-            display: flex;
-        }
-        .right-block{
-            width: 30%;
-            display: flex;
-            flex-direction: column;
-        }
-        .footer-about{
-            font-size: 20px;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-        .footer-col{
-            display: flex;
-            flex-direction: column;
-            width: 20%;
-        }
-        .footer-col-heading{
-            font-weight: 700;
-            color: #797979;
-       }
-       .footer-list{
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        border: 0;
-       }
-       .footer-links{
-        text-decoration: none; 
-        color: #d7d7d7; 
-        font-size: 20px; 
-        line-height: 2;
-       }
-    </style>
+    <link rel="stylesheet" href="./css/redRail.css">
 </head>
 <body>
     <div id="nav">
@@ -179,15 +47,16 @@
     <div id="block3">
         <div id="list_wrap">
             <h3 style="color: #D84E55; padding-bottom: 12px; font-weight: bold;">How it works</h3>
-            <div onclick="myFunction('1')" id="1"> Click on redRail and enter journey details.</div>
-            <div onclick="myFunction('2')" id="2"> Select Train & Class.</div>
-            <div onclick="myFunction('3')" id="3">Enter IRCTC user id & passenger details.</div>
-            <div onclick="myFunction('4')" id="4">Select a payment method and make the payment.</div>
-            <div onclick="myFunction('5')" id="5">Enter your IRCTC password. </div>
+            <div onclick="myFunction('1')" id="1"><span style="font-weight: bold;">1. </span>  Click on redRail and enter journey details.</div>
+            <div onclick="myFunction('2')" id="2"><span style="font-weight: bold;">2. </span>  Select Train & Class.</div>
+            <div onclick="myFunction('3')" id="3"><span style="font-weight: bold;">3. </span>  Enter IRCTC user id & passenger details.</div>
+            <div onclick="myFunction('4')" id="4"><span style="font-weight: bold;">4. </span>  Select a payment method and make the payment.</div>
+            <div onclick="myFunction('5')" id="5"><span style="font-weight: bold;">5. </span>  Enter your IRCTC password. </div>
         </div>
         <div id="imgs">
-            <img src="https://st.redbus.in/Images/redrail/mob2_cont.png">
+            <img id="screens" src="https://st.redbus.in/Images/redrail/mob2_cont.png">
         </div>
+        <div style="clear: left;"></div>
     </div>
     <div id="block4">
         <div style="padding-bottom: 24px;font-weight: bold; font-size: 28px; line-height: 34px;">FAQ</div>
@@ -333,3 +202,4 @@
     </div>
 </body>
 </html>
+<script src="./Script/redRail.js"></script>
