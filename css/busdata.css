@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+#navbar{
+    height: 70px;
+    background-color: #d84f57;
+
+}
+#to_by{
+    height: 70px;
+    background-color: #f8f4f4;
+    display: grid;
+    align-items: center;
+    padding: 10px 20px;
+    
+}
+#to_by>:last-child{
+    font-weight: bold;
+}
+#fare_details{
+    height: 60px;
+    background-color: white;
+}
+#grid_part{
+    width: 98%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+#grid_part>#sidebar{
+    background-color: #d84f57;
+    padding: 10px;
+    display: grid;
+    align-content: space-between;
+    height: 1000px;
+}
+#grid_part>#main_section{
+    background-color: gold;
+}
