@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rPool</title>
+    <style>
+
+#nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    background-color: #d84e55;
+    color: rgb(243, 243, 243);
+    font-family: "Montserrat";
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+#nav > a{
+    margin-top: 9px;
+    color: white;
+    text-decoration: none;
+}
+#part1{
+    width: 100%;
+    height: 42rem;
+    border: 1px solid red;
+    margin-top: 50px;
+    background-color: #d84e55;
+}
+#d1{
+    width: 80%;
+    height: 23rem;
+    display: flex;
+    margin: auto;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    /* padding-top:30px; */
+}
+#d1 > div{
+    width: 50%;
+    text-align: left; 
+}
+#d1 > div > img{
+    width: 105%;
+    margin-left: 5px;
+}
+#d1 > div > h1 {
+    margin-left: 50px;
+    color: rgb(61, 61, 75);
+}
+#d2{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    font-size: 22px;
+    color: white;
+}
+#d2 > div:nth-child(2) > img{
+    width:90%;     
+} 
+#part2{
+    width: 100%;
+    background-color:#3e3e52;
+}
+#part2 > div{
+    margin: auto;
+    width: 90%;
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;    
+}
+#part2 > div > a{
+    color: white;
+    margin-top: 25px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#part3{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    border: 1px solid;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#part4{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    background-color: #f7f7f7;
+}
+#part4 > div{
+    width: 35%;
+    margin: 50px 0px 50px 0px;
+}
+#part5, #part6{
+    width: 85%;
+    padding: 10px 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+    background-color: white;
+}
+#part7{
+    width: 80%;
+    margin: auto;
+    font-size: 23px;
+    padding: 80px;
+}
+
+</style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html"><img src="https://st.redbus.in/Images/redrail/r_logo.png"></a>
+        <a href="">BUS TICKETS</a>
+        <a href="">rPool</a>
+        <a href="">BUS HIRE</a>
+    </div>
+    <div id="part1">
+        <div id="d1">
+            <div style="border-right: 1px solid gray;">
+                <h1>Commuting within the City?</h1>
+                <img src="https://st.redbus.in/Images/rpools/rPoolIntracity.svg" alt="">
+            </div>
+            <div>
+                <h1>Travelling out of town?</h1>
+                <img src="https://st.redbus.in/Images/rpools/rPoolOutstation.svg" alt="">
+            </div>
+        </div>
+        <div id="d2">
+            <div style="width: 85%;">
+                <p style="font-size: 37px; margin-bottom: -8px;"><b>Share your rides on rPool</b>, Bikepool & Carpool for Professionals </p>
+                <p>Intra-City services currently live in BANGALORE, HYDERABAD, PUNE, NEW DELHI-NCR and CHENNAI
+                Outstation services currently live across India</p>
+            </div>
+            <div style="width: 15%; padding-top: 50px; text-align: center;">
+                <img src="https://www.redbus.in/r-pool/images/googleplay.svg" alt="">
+                <img src="https://www.redbus.in/r-pool/images/ic_appstore.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="part2">
+        <div>
+            <a href="">How it works</a>
+            <a href="">What is rPool</a>
+            <a href="">Corporate</a>
+            <a href="">rPool for RWA's</a>
+            <a href="">why rPool</a>
+            <a href="">customer Review</a>
+            <a href="">FAQs</a>
+        </div>
+    </div>
+    <div id="part3">
+        <div style="width: 23%; border: 1px solid; text-align: center;">
+            <img src="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png">
+        </div>
+        <div style="width: 75%; border: 1px solid; color:#2b2b37;">
+            <h1>How it works</h1>
+            <button>Find Rides</button>
+            <button>Offer Ride</button>
+        </div>
+    </div>
+    <div id="part4">
+        <div>
+            <h1>What is rPool?</h1>
+            <p style="color:gray">rPool is an eco-smart option for handling all your travel needs by connecting you 
+                with fellow professional riders. As our cities are growing, increased traffic adds 
+                to the chaos and pollution. Hence, we have committed to providing a convenient, 
+                economical and sustainable solution to this problem through carpooling and bike pooling.</p>
+        </div>
+        <div id="video" style="margin-right:100px;"> 
+            <iframe 
+              width="600" 
+              height="300" 
+              src="https://www.youtube.com/embed/GIZlD2b2bn8" 
+              title="rPool by redBus - Bikepool and Carpool for Professionals" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div style="background-color: #f7f7f7; height: 45rem; ">
+        <div id="part5">
+            <h2>rPool within your city:</h2>
+            <p>Ridesharing is the best option for socially responsible citizens to commute 
+                within the city. Optimizing every ride, rPool makes it easy to find fellow 
+                riders on your route and split your commute costs.</p>
+        </div>
+        <div id="part6">
+            <h2>rPool within your city:</h2>
+            <p>Now, carpool/bikepool to destinations outside your city too! We are going the distance for you with outstation ridesharing on rPool.</p>
+            <br>
+            <div style="display:flex; justify-content: space-between;">
+                <div style="width:40%;">
+                    <img src="https://st.redbus.in/Images/rpools/safety.svg" alt="">
+                    <h3>Safety feature on the go!</h3>
+                    <p>With multiple safety features including the rPool Shield, Live Tracking and SOS Button, it is certainly safe to travel outside your city using rPool!</p>
+                </div>
+                <div style="width:50%;">
+                    <img src="https://st.redbus.in/Images/rpools/zeroCommision.svg" alt="">
+                    <h3>Pay zero commission!</h3>
+                    <p>Outstation ridesharing services by rPool are free of cost.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part7">
+        <div style="display:flex; justify-content: space-between;">
+            <div style="width:65%;">
+                <h1>rPool Corporate+, exclusive for Corporates</h1>
+                <h3>Say “goodbye” to getting frustrated with traffic and road rage and say “hello” to arriving fresh to work every morning.</h3>
+                <p style="color:gray;">rPool Corporate+ is an exclusive bikepool and carpool model for corporates. rPool partners with corporates to provide carpooling and 
+                        bikepooling as an alternative to existing modes of employee commute. rPool Corporate+ pools employees commuting in the same routes 
+                        into a single ride, allowing them to travel smarter to work, save on commute costs, and make connections along the way.</p>
+            </div>
+            <div style="width:30%;">
+                <img style="width:100%" src="https://st.redbus.in/Images/rpools/corporates.svg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+</script>
