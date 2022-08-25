@@ -6,6 +6,7 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
+    font-size: small;
 }
 #navbar{
     height: 70px;
@@ -34,7 +35,6 @@ body{
     grid-template-columns: 1fr 4fr;
 }
 #grid_part>#sidebar{
-    background-color: #d84f57;
     padding: 10px;
     display: grid;
     align-content: space-between;
@@ -42,4 +42,15 @@ body{
 }
 #grid_part>#main_section{
     background-color: gold;
+}
+#grid_part>#sidebar>input{
+    padding: 5px;
+    width: fit-content;
+    
+}
+#grid_part>#sidebar>span{
+    border: 1px solid grey;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
