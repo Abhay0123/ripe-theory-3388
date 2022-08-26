@@ -22,7 +22,7 @@
       </div>
 
       <div class="input-search-container">
-        <form class="d-flex justify-content-center">
+        <form class="d-flex justify-content-center"">
           <div class="d-inline-block position-relative">
             <span class="inputIcon"><i class="far fa-building"></i></span>
             <label class="inputLabel-default" for="input-label-from"></label>
@@ -64,11 +64,7 @@
           </div>
 
           <div class="d-inline-block position-relative">
-            <input
-              class="btn btn-danger rounded-0 pl-3 pr-3 pb-2"
-              type="submit"
-              value="Search Buses"
-            />
+            <input onclick="searchBtn()" class="btn btn-danger rounded-0 pl-3 pr-3 pb-2" type="submit" value="Search Buses">
           </div>
         </form>
       </div>
@@ -328,67 +324,166 @@
     </div>
 
     <div class="main-div7">
-    <div class="div7-inner">
+      <div class="div7-inner">
         <div>
-            <ul style="list-style-type:none">
-                <li class="ul-li-heading">Top Bus Route</li>
-                <li>Hyderabad to Bangalore Bus</li>
-                <li>Bangalore to Chennai Bus</li>
-                <li>Pune to Bangalore Bus</li>
-                <li>Mumbai to Bangalore Bus</li>
-                <li>More ></li>
-            </ul>
+          <ul style="list-style-type: none">
+            <li class="ul-li-heading">Top Bus Route</li>
+            <li>Hyderabad to Bangalore Bus</li>
+            <li>Bangalore to Chennai Bus</li>
+            <li>Pune to Bangalore Bus</li>
+            <li>Mumbai to Bangalore Bus</li>
+            <li>More ></li>
+          </ul>
         </div>
         <div>
-            <ul style="list-style-type:none">
-                <li class="ul-li-heading">Top Cities</li>
-                <li>Hyderabad Bus Tickets</li>
-                <li>Banglore Bus Service</li>
-                <li>Chennai bus Tickets</li>
-                <li>Pune Bus Tickets</li>
-                <li>More ></li>
-            </ul>
+          <ul style="list-style-type: none">
+            <li class="ul-li-heading">Top Cities</li>
+            <li>Hyderabad Bus Tickets</li>
+            <li>Banglore Bus Service</li>
+            <li>Chennai bus Tickets</li>
+            <li>Pune Bus Tickets</li>
+            <li>More ></li>
+          </ul>
         </div>
         <div>
-            <ul style="list-style-type:none">
-                <li class="ul-li-heading">Top RTC's</li>
-                <li>APSRTC</li>
-                <li>GSRTC</li>
-                <li>MSRTC</li>
-                <li>TNSTC</li>
-                <li>More ></li>
-            </ul>
+          <ul style="list-style-type: none">
+            <li class="ul-li-heading">Top RTC's</li>
+            <li>APSRTC</li>
+            <li>GSRTC</li>
+            <li>MSRTC</li>
+            <li>TNSTC</li>
+            <li>More ></li>
+          </ul>
         </div>
         <div>
-            <ul style="list-style-type:none">
-                <li class="ul-li-heading">Other</li>
-                <li>TSRTC</li>
-                <li>SBRTC</li>
-                <li>RSRTC</li>
-                <li>KeralaRTC</li>
-                <li>More ></li>
-            </ul>
+          <ul style="list-style-type: none">
+            <li class="ul-li-heading">Other</li>
+            <li>TSRTC</li>
+            <li>SBRTC</li>
+            <li>RSRTC</li>
+            <li>KeralaRTC</li>
+            <li>More ></li>
+          </ul>
         </div>
         <div>
-            <ul style="list-style-type:none">
-                <li class="ul-li-heading">Tempo Traveller in Cities</li>
-                <li>Tempo traveller in Bangalore</li>
-                <li>Tempo traveller in chennai</li>
-                <li>Tempo traveller in Hyderabad</li>
-                <li>Tempo traveller in Mumbai</li>
-                <li>Tempo traveller in Ahmedabad</li>
-            </ul>
-            
+          <ul style="list-style-type: none">
+            <li class="ul-li-heading">Tempo Traveller in Cities</li>
+            <li>Tempo traveller in Bangalore</li>
+            <li>Tempo traveller in chennai</li>
+            <li>Tempo traveller in Hyderabad</li>
+            <li>Tempo traveller in Mumbai</li>
+            <li>Tempo traveller in Ahmedabad</li>
+          </ul>
         </div>
-     </div>
+      </div>
 
-     <hr>
-     <div class="top-oprator animate">
+      <hr />
+      <div class="top-oprator animate">
         <p>Top Oprator</p>
-        <p>SRS Travels  | Kallada Travels | KPN Travels | Orang Travels | Praveen Travels | Rajadhani Travels | VRL Travels |  Chrtered  Bus | Bengal Tiger | <br>
-            SRM Travels | Infant Jesus | Patel Travels | JBT travels | Shatabdi Travels | Egal Travels | Kanker Roadwars | Komitla | Sri Krishna travels | <br> Humsafar Travels |  Mahasagar Travels | Raj  Express | Sharma Travels | Shrinath Travels | Universal Travels | Verma Travels | Gujrat Travels | <br> Madurai Travels | Patel Tour And Travels | Paulo Travels | Royal Travels | Amarnath Travels | Vaibhav Travels |  Ganesh Travels | Jabbar Travels | <br> Jain Travels |  Manish Travels |  Pradhan Travels | YBM Travels | Hebron Transport |  Mahalaxmi Travels | MR Travels | <br>  Vivegam travels | VST Travels | Jaksha Travels | Mahendra Travels | Neeta Tours And Travels | Yamini Travels | Arthi Travels</p>
-            <p>All Oprator ></p>
-     </div>
-</div>
+        <p>
+          SRS Travels | Kallada Travels | KPN Travels | Orang Travels | Praveen
+          Travels | Rajadhani Travels | VRL Travels | Chrtered Bus | Bengal
+          Tiger | <br />
+          SRM Travels | Infant Jesus | Patel Travels | JBT travels | Shatabdi
+          Travels | Egal Travels | Kanker Roadwars | Komitla | Sri Krishna
+          travels | <br />
+          Humsafar Travels | Mahasagar Travels | Raj Express | Sharma Travels |
+          Shrinath Travels | Universal Travels | Verma Travels | Gujrat Travels
+          | <br />
+          Madurai Travels | Patel Tour And Travels | Paulo Travels | Royal
+          Travels | Amarnath Travels | Vaibhav Travels | Ganesh Travels | Jabbar
+          Travels | <br />
+          Jain Travels | Manish Travels | Pradhan Travels | YBM Travels | Hebron
+          Transport | Mahalaxmi Travels | MR Travels | <br />
+          Vivegam travels | VST Travels | Jaksha Travels | Mahendra Travels |
+          Neeta Tours And Travels | Yamini Travels | Arthi Travels
+        </p>
+        <p>All Oprator ></p>
+      </div>
+    </div>
+
+    <div class="main-div8">
+      <div class="div8-inner">
+        <div>
+          <ul>
+            <li class="ul-li-head">About RedBus</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Mobile Version</li>
+            <li>RedBus On Mobile</li>
+            <li>Sitemap</li>
+            <li>Offers</li>
+            <li>Careers</li>
+            <li>Values</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="ul-li-head">Info</li>
+            <li>T & C</li>
+            <li>Privacy Policy</li>
+            <li>FAQ</li>
+            <li>Blog</li>
+            <li>Bus Oprator Registration</li>
+            <li>Agent Registration</li>
+            <li>Insurance Partner</li>
+            <li>User Agreement</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li class="ul-li-head">Global Site</li>
+            <li>India</li>
+            <li>Singapor</li>
+            <li>Malaysia</li>
+            <li>Peru</li>
+            <li>Indonesia</li>
+            <li>Colombia</li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>
+            <li class="ul-li-head">Our Partener</li>
+            <li>Goibibo</li>
+            <li>Makemytrip</li>
+          </ul>
+        </div>
+
+        <div class="red-bus">
+          <img
+            src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"
+            alt=""
+          />
+          <p>
+            redBus is the world's largest online bus ticket booking service
+            trusted by over 25 million happy customers globally. redBus offers
+            bus ticket booking through its website,iOS and Android mobile apps
+            for all major routes.
+          </p>
+          <div class="img">
+            <img src="./indexImages/facebook.png" alt="" /><img
+              src="./indexImages/twitter.png"
+              alt=""
+            />
+          </div>
+          <p>Ⓒ 2022 ibibogroup All rights reserved</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+<script src="landingPage.js"></script>
+
+<script type="module">
+
+import navbar from './components/navbar.js';
+
+
+
+let container = document.getElementById("header");
+
+container.innerHTML = navbar();
+
+</script>
