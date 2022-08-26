@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -40,33 +41,41 @@
     display: flex;
   }
   #top {
+
     margin: auto;
     text-align: center;
     font-size: larger;
     width: 36%;
+
     color: rgb(87, 84, 84);
     margin-top: 50px;
   }
   #select {
     width: 70%;
+
     height: 180px;
     text-align: center;
     padding: 30px;
     margin: auto;
   }
+
   #select > div {
+
     color: rgb(87, 84, 84);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+
   }
   #select > div > div {
     border: 1px solid blue;
+
     display: flex;
     justify-content: center;
     align-items: center;
     width: 330px;
+
   
     border-radius: 10px;
   }
@@ -171,12 +180,15 @@
     font-size: 34px;
   }
   .heading_p {
+
+
     display: flex;
     gap: 5px;
     margin-left: 15%;
     margin-top: 40px;
     margin-bottom: -40px;
     font-size: 22px;
+
   }
   #book {
     display: grid;
@@ -280,6 +292,7 @@
     border-radius: 10px;
     width: 110px;
   
+
     color: white;
     display: flex;
     justify-content: center;
@@ -287,6 +300,7 @@
     font-size: smaller;
     height: 15px;
     padding: 1px;
+
   }
   #book_in_3_steps {
     width: 70%;
@@ -296,16 +310,20 @@
     gap: 20px;
   }
   #book_in_3_steps > div {
+
     display: flex;
     border: 0.5px solid magenta;
     border-radius: 10px;
     padding: 10px;
+
   }
   #more {
+
     display: flex;
     margin: auto;
     width: 70%;
     gap: 20px;
+
     font-size: large;
     color: gray;
   }
@@ -439,3 +457,4 @@
     color: brown;
   }
   
+
