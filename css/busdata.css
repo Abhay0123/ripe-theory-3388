@@ -1,56 +1,207 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
-}
-body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: small;
-}
-#navbar{
-    height: 70px;
-    background-color: #d84f57;
 
 }
-#to_by{
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#navbar {
+    height: 70px;
+    background-color: #d84f57;
+}
+
+#to_by {
     height: 70px;
     background-color: #f8f4f4;
     display: grid;
     align-items: center;
     padding: 10px 20px;
-    
+
 }
-#to_by>:last-child{
-    font-weight: bold;
-}
-#fare_details{
+
+#fare_details {
     height: 60px;
     background-color: white;
+    font-size: medium;
 }
-#grid_part{
+
+#grid_part {
     width: 98%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
+
 }
-#grid_part>#sidebar{
+
+#grid_part>#sidebar {
     padding: 10px;
     display: grid;
     align-content: space-between;
     height: 1000px;
+    font-size: small;
 }
-#grid_part>#main_section{
-    background-color: gold;
-}
-#grid_part>#sidebar>input{
+
+#grid_part>#sidebar>input {
     padding: 5px;
     width: fit-content;
-    
+
 }
-#grid_part>#sidebar>span{
+
+#fare_details+hr {
+    margin-bottom: 50px;
+}
+
+#grid_part>#sidebar>span {
     border: 1px solid grey;
     width: fit-content;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+#main_section {
+    font-size: small;
+}
+
+#discountcard {
+    overflow: auto;
+    width: 76vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 10px;
+
+}
+
+#discountcard>img {
+    width: 150px;
+}
+
+#discountcard+h2 {
+    margin: 10px;
+    font-size: small;
+}
+
+#discountcard+h2+hr {
+    border: 1px solid rgb(233, 223, 223);
+    margin: 10px auto;
+}
+
+#sort_section {
+    display: flex;
+    column-gap: 50px;
+    position: sticky;
+}
+
+#sort_section>div {
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 20px;
+}
+
+#all_bus_data {
+    display: grid;
+    row-gap: 30px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#all_bus_data>div {
+    border: 1px solid grey;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px;
+    justify-content: space-between;
+    align-content: space-between;
+    grid-template-areas: "one two three";
+}
+
+#all_bus_data>div>div {
+    display: grid;
+    row-gap: 40px;
+}
+
+.six>button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    color: white;
+}
+
+#all_bus_data>div>:first-child>p {
+    font-weight: bolder;
+
+}
+
+#all_bus_data>div>:nth-child(2)>p {
+    font-weight: bolder;
+
+}
+
+#all_bus_data>div>:nth-child(3)>p {
+    font-weight: bolder;
+
+}
+
+#all_bus_data>div>:nth-child(3)>p+p {
+    /* font-weight: bolder; */
+    font-weight: normal;
+    color: red;
+
+}
+
+#all_bus_data>div>:nth-child(5)>:first-child {
+    font-weight: bolder;
+
+}
+
+#all_bus_data>div>:nth-child(4)>:first-child {
+    background-color: green;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+
+#seven {
+    /* background-color: #d84f57; */
+    grid-area: 2/1/3/7;
+    height: 200px;
+    background-color: #eeeded;
+}
+
+#seatprice_hover{
+    display: flex;
+    column-gap: 30px;
+    padding: 0px 0 0 50px;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    align-items: center;
+
+}
+#seatprice_hover>p{
+    border: 1px solid grey;
+    width: 80px;
+    height: fit-content;
+    padding: 5px;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+}
+#seatprice_hover>:first-child{
+    background-color: #545454;
+    color: white;
+}
+#seatprice_hover>p:hover{
+    background-color: #545454;
+    color: white;
+    cursor: pointer;
 }

@@ -50,4 +50,106 @@ const busdata = [
     { busname: "Vijay Shakti Travels", bustype: "A/C Seater/Sleeper", Depature: "20:45", arrival: "05:30", pickup: "majnu ka teela", drop: "private bus stop", seats: 26, rating: "4.5", price: 754 },
     { busname: "Deepak Transport Company", bustype: "A/C Seater/Sleeper", Depature: "20:45", arrival: "05:30", pickup: "majnu ka teela", drop: "private bus stop", seats: 26, rating: "4.5", price: 856 },
 ]
+showdata()
+function showdata(from,to,date){
+    busdata.forEach((el,i)=>{
+        let div1 = document.createElement("div")
+        div1.className = "one"
+        let div2 = document.createElement("div")
+        div2.className = "two"
+        let div3 = document.createElement("div")
+        div3.className = "three"
+        let div4 = document.createElement("div")
+        div4.className = "four"
+        let div5 = document.createElement("div")
+        div5.className = "five"
+        let div6 = document.createElement("div")
+        div6.className = "six"
 
+        let busname = document.createElement("p")
+        busname.innerText = el.busname
+        let bustype = el.bustype
+        let arrival = document.createElement("p")
+        arrival.innerText = el.arrival
+        let Depature = document.createElement("p")
+        Depature.innerText = el.Depature
+        let pickup = el.pickup
+        let drop = el.drop
+        let rating = document.createElement("p")
+        rating.innerText = el.rating
+        let people =  document.createElement("p")
+        people.innerText  = `Rated by : ${el.price-127}`
+        let price = el.price
+        let pp = document.createElement("p")
+        pp.innerText = `${el.price} Seats available`
+        let seats = pp
+
+       
+
+        let p = document.createElement("p")
+        p.innerText = `Starts from INR 20% off ${price}`
+
+        let p2 = document.createElement("p")
+        p2.innerText = "@redDeal applied"
+
+        let p3 = document.createElement("p")
+        p3.innerText = "5Single"
+
+        let view_seats = document.createElement("button")
+        view_seats.style.backgroundColor = "#d84e55"
+        view_seats.innerText = "VIEW SEATS"
+        view_seats.onclick = function(){
+            book(el,i)
+        }
+
+        let date = document.createElement("p")
+        date.innerText = "27 Aug"
+
+        div1.append(busname,bustype)
+        div2.append(Depature,pickup)
+        div3.append(arrival,date,drop)
+        div4.append(rating,people)
+        div5.append(p,p2)
+        div6.append(seats,view_seats)
+
+        let main_div = document.createElement("div")
+        main_div.className = "main_cards"
+        main_div.append(div1,div2,div3,div4,div5,div6)
+      
+
+        document.getElementById("all_bus_data").append(main_div)
+
+    })
+}
+function book(el,i){
+    
+    if(event.target.innerText == "VIEW SEATS"){
+        let div = document.createElement("div")
+        div.id = "seven"
+        
+        
+        let seatprice = document.createElement("div")
+        seatprice.id = "seatprice_hover"
+        let all = document.createElement("p")
+        all.innerText = "ALL"
+        let pr1 = document.createElement("p")
+        pr1.innerText = el.price
+        let pr2 = document.createElement("p")
+        pr2.innerText = el.price+225
+        seatprice.append(all,pr1,pr2)
+
+        div.append(seatprice)
+
+
+
+        let y = event.target.parentNode.parentNode
+        y.append(div)
+        console.log(y)
+        event.target.innerText = "HIDE SEATS"
+        
+    }else{
+        window.location.reload()
+        event.target.innerText = "VIEW SEATS"
+    }
+
+}
