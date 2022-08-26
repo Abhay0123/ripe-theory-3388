@@ -174,14 +174,17 @@ body {
 #seven {
     /* background-color: #d84f57; */
     grid-area: 2/1/3/7;
-    height: 200px;
+    height: 450px;
     background-color: #eeeded;
+    align-content: flex-start;
+   
+    
 }
 
 #seatprice_hover{
     display: flex;
     column-gap: 30px;
-    padding: 0px 0 0 50px;
+    padding-left: 50px;
     height: 70px;
     border-bottom: 1px solid grey;
     align-items: center;
@@ -204,4 +207,49 @@ body {
     background-color: #545454;
     color: white;
     cursor: pointer;
+}
+#seven_container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    width: 95%;
+    margin: auto;
+    column-gap: 20px;
+}
+#cont_left>#lower_deck{
+    background-color: white;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+#cont_left>p{
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #d84f57;
+    color: white;
+    padding: 5px 10px;
+    width: fit-content;
+
+}
+#cont_right{
+    display: grid;
+    row-gap: 5px;
+
+}
+#cont_right>div{
+    display: flex;
+    margin: 10px 0;
+    row-gap: 5px;
+}
+#cont_right>div>input{
+    width: 40px;
+    margin-right: 5px;
+    
+}
+#cont_right>div>p{
+    margin-right: 30px;
+    width: fit-content;
+}
+#cont_right>div>p+input{
+    background-color: #545454;
+    border: 1px solid #545454;
 }
