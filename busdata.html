@@ -7,28 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/busdata.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- navbar section  -->
     <section id="navbar">
-       
+
     </section>
 
     <!-- bus pick and drop  -->
     <section id="to_by">
-       <p><b>Home > </b>Bus Tickets > Delhi Bus > <span id="fare">Delhi To Jaipur Bus</span></p>
-       <p>Fare start from INR 300</p>
+        <p><b>Home > </b>Bus Tickets > Delhi Bus > <span id="fare">Delhi To Jaipur Bus</span></p>
+        <p><b>Fare start from INR 300</b></p>
     </section>
 
 
     <!-- fare details -->
     <section id="fare_details">
-       
+
     </section>
 
     <!-- bus data section -->
+    <hr>
     <section id="grid_part">
         <div id="sidebar">
             <h4>FILTERS</h4>
@@ -36,22 +38,22 @@
             <p>Live Traking</p>
             <hr>
             <h4>DEPARTURE TIME</h4>
-            <p><input type="checkbox">  Before 6 am</p>
-            <p><input type="checkbox">  6 am to 12 pm</p>
-            <p><input type="checkbox">  12 pm to 6 pm</p>
-            <p><input type="checkbox">  After 6 pm</p>
+            <p><input type="checkbox"> Before 6 am</p>
+            <p><input type="checkbox"> 6 am to 12 pm</p>
+            <p><input type="checkbox"> 12 pm to 6 pm</p>
+            <p><input type="checkbox"> After 6 pm</p>
             <h4>BUS TYPES</h4>
-            <p><input type="checkbox">  SEATER</p>
-            <p><input type="checkbox">  SLEEPER</p>
-            <p><input type="checkbox">  AC</p>
-            <p><input type="checkbox">  NONAC</p>
+            <p><input type="checkbox"> SEATER</p>
+            <p><input type="checkbox"> SLEEPER</p>
+            <p><input type="checkbox"> AC</p>
+            <p><input type="checkbox"> NONAC</p>
             <h4>SEAT AVAILIBILITY</h4>
-            <p><input type="checkbox">  Single Seats</p>
+            <p><input type="checkbox"> Single Seats</p>
             <h4>ARRIVAL TIME</h4>
-            <p><input type="checkbox">  Before 6 am</p>
-            <p><input type="checkbox">  6 am to 12 pm</p>
-            <p><input type="checkbox">  12 pm to 6 pm</p>
-            <p><input type="checkbox">  After 6 pm</p>
+            <p><input type="checkbox"> Before 6 am</p>
+            <p><input type="checkbox"> 6 am to 12 pm</p>
+            <p><input type="checkbox"> 12 pm to 6 pm</p>
+            <p><input type="checkbox"> After 6 pm</p>
             <h4>BOARDING POINT</h4>
             <input type="text" placeholder="BOARDING POINT">
             <h4>DROPPING POINT</h4>
@@ -67,10 +69,33 @@
             <Span>Movie</Span>
             <Span>Track My Bus</Span>
             <Span>Toilet</Span>
-           
+
         </div>
         <div id="main_section">
+            <!-- card section  -->
+            <div id="discountcard">
+                <img src="https://st.redbus.in/Images//ReddealsCards/IND/primo1_MainCard.png" alt="Primo">
+                <img src="https://st.redbus.in/Images/ReddealsCards/IND/15850_MainCard.png" alt="Vikas Travel">
+                <img src="https://s3.rdbuz.com/Images/ReddealsCards/IND/Returnonward_MainCard.png" alt="rdbuz">
+                <img src="https://s3.rdbuz.com/Images/ReddealsCards/IND/FlexiTicket_MainCard.png" alt="Flexi">
+                <img src="https://s3.rdbuz.com/Images/ReddealsCards/IND/2_20_MainCard.png" alt="top rated">
+                <img src="https://s3.rdbuz.com/Images/ReddealsCards/IND/4_10_MainCard.png" alt="">
+            </div>
+            <h2>All bus ratings include safety as a major factor</h2>
+            <hr>
+            <div id="sort_section">
+                <p><span id="bus_count">6 </span><b> Buses</b> found</p>
+                <div>
+                    <h4>SORT BY : </h4>
+                    <p>Departure</p>
+                    <p>Arrival</p>
+                    <p id="rating">Ratings</p>
+                    <p id="fareprice">Fare</p>
+                </div>
+            </div>
+            <div id="all_bus_data">
 
+            </div>
         </div>
     </section>
 
