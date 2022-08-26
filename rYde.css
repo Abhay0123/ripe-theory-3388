@@ -60,11 +60,9 @@
   }
 
   #select > div {
-
     color: rgb(87, 84, 84);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
 
   }
@@ -269,7 +267,8 @@
     padding: 2px;
   }
   #safety {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     margin: auto;
     width: 70%;
   }
@@ -456,5 +455,83 @@
   #footer > div a:hover {
     color: brown;
   }
-  
+  @media  screen and (min-width:350px) and (max-width:550px){
+   
+
+    #select > div {
+    
+        
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    #partners{
+        display: grid;
+       grid-template-columns: repeat(2,1fr); 
+    }
+    #book{
+      
+        grid-template-columns: repeat(2,1fr);
+       grid-template-rows: repeat(4,200px);
+        
+    }
+    #book_in_3_steps {
+        grid-template-columns: repeat(2,1fr);
+     
+    }
+    #top {
+        width: 400px;
+       font-size: medium;
+     
+    }
+    #offers{
+        margin-top: 220px;
+    }
+    #reviews{
+        margin-top: 150px;
+    }
+    .heading {
+        margin-top:300px;
+    }
+    #offers{
+    margin-top: -10px;
+    }
+    #hmq{
+      margin-top:20px;
+    }
+    #cmq{
+        margin-top: 220px;
+        margin-bottom: -130px;
+    }
+    .heading_s{
+        margin-bottom: -290px;
+    }
+    #safety {
+        
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+       
+    }
+   #guidelines p{
+   line-height: 22px;
+   } 
+}
+    @media  screen and (min-width:551px) and (max-width:700px){
+       
+    
+        #select > div {
+        
+         
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,100px);
+        }
+        #partners{
+            display: grid;
+           grid-template-columns: repeat(3,1fr); 
+        }
+        #book{
+           
+            grid-template-columns: repeat(2,1fr);
+           
+        }
+        }
 
