@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rPool</title>
+    <style>
+
+#nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    background-color: #d84e55;
+    color: rgb(243, 243, 243);
+    font-family: "Montserrat";
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+#nav > a{
+    margin-top: 9px;
+    color: white;
+    text-decoration: none;
+}
+#part1{
+    width: 100%;
+    height: 42rem;
+    border: 1px solid red;
+    margin-top: 50px;
+    background-color: #d84e55;
+}
+#d1{
+    width: 80%;
+    height: 23rem;
+    display: flex;
+    margin: auto;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 20px;
+    /* padding-top:30px; */
+}
+#d1 > div{
+    width: 50%;
+    text-align: left; 
+}
+#d1 > div > img{
+    width: 105%;
+    margin-left: 5px;
+}
+#d1 > div > h1 {
+    margin-left: 50px;
+    color: rgb(61, 61, 75);
+}
+#d2{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    font-size: 22px;
+    color: white;
+}
+#d2 > div:nth-child(2) > img{
+    width:90%;     
+} 
+#part2{
+    width: 100%;
+    background-color:#3e3e52;
+}
+#part2 > div{
+    margin: auto;
+    width: 90%;
+    height: 75px;
+    display: flex;
+    justify-content: space-evenly;    
+}
+#part2 > div > a{
+    color: white;
+    margin-top: 25px;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+#part3{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid; */
+    justify-content: space-around;
+    padding-top: 20px;
+}
+#part4{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    background-color: #f7f7f7;
+}
+#part4 > div{
+    width: 35%;
+    margin: 50px 0px 50px 0px;
+}
+#part5, #part6{
+    width: 85%;
+    padding: 10px 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+    background-color: white;
+}
+#part7, #part8{
+    width: 80%;
+    margin: auto;
+    font-size: 23px;
+    padding: 40px 0px 40px 0px;
+}
+#part9{
+    width:85%;
+    font-size: 21px;
+    margin: auto;
+}
+
+#part10{
+    width: 90%;
+    display: flex;
+    /* border: 1px solid; */
+    height: 25rem;
+    margin: auto;
+    justify-content: space-evenly;
+    background-color: #ededed;
+}
+#part10 > div{
+    width: 16%;
+    padding: 35px;
+    height: 13rem;
+    margin-top: 62px;
+    background-color: white;
+}
+#part10 > div:nth-child(1){
+    width: 18%;
+    background-color: #ededed;
+    font-size: larger;
+    padding-left: 25px;
+}
+.tags{
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+#block4{
+    background: #FFFFFF;
+    padding: 48px 10%;
+    color: #3E3E52;
+}
+#block5{
+    padding: 3em 7em;
+    display: flex;
+    background: #1a2230;
+    color: #fff;
+}
+.left-block{
+    width: 70%;
+    display: flex;
+}
+.right-block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-about{
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.footer-col-heading{
+    font-weight: 700;
+    color: #797979;
+}
+.footer-list{
+list-style: none;
+margin: 0;
+padding: 0;
+border: 0;
+}
+.footer-links{
+text-decoration: none; 
+color: #d7d7d7; 
+font-size: 20px; 
+line-height: 2;
+cursor: pointer;
+}
+#part11{
+    width: 100%;
+    height: 17rem;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    color:rgb(77, 77, 77);
+    padding-top: 30px;
+}
+#reviews > div {
+    width: 26%; 
+    height: 7rem; 
+    margin: auto; 
+    border: 1px solid rgb(166, 166, 166); 
+    padding: 5px 40px 20px 40px; 
+    font-size: 18px;
+    color:rgb(105, 104, 104);
+}
+#ride{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ridework{
+    width: 10rem;
+    display: flex; 
+    justify-content: space-between;
+    /* border: 1px solid; */
+    cursor: pointer;
+    font-size: 20px;
+}
+.ridework > div:first-child{
+    /* border: 1px solid; */
+    width:20%;
+    border-radius: 50%;
+    text-align: center;
+    height:30px;
+    padding-top:3px;
+    background-color: #38b87c;
+    color: white;
+}
+#texts{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18.5px;
+    margin-top: 30px;
+    margin-left: 5%;
+}
+#offer{
+    width: 60%;
+    height: 40px;
+    border: 1px solid rgb(147, 147, 147);
+    border-radius: 10px;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-left: 10%;
+    margin-left: 5%;
+}
+#part3 > div > button{
+    font-size: 17px;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+button:hover{
+
+}
+</style>
+</head>
+<body>
+    <div id="nav">
+        <a href="index.html"><img src="https://st.redbus.in/Images/redrail/r_logo.png"></a>
+        <a href="">BUS TICKETS</a>
+        <a href="">rPool</a>
+        <a href="">BUS HIRE</a>
+    </div>
+    <div id="part1">
+        <div id="d1">
+            <div style="border-right: 1px solid gray;">
+                <h1>Commuting within the City?</h1>
+                <img src="https://st.redbus.in/Images/rpools/rPoolIntracity.svg" alt="">
+            </div>
+            <div>
+                <h1>Travelling out of town?</h1>
+                <img src="https://st.redbus.in/Images/rpools/rPoolOutstation.svg" alt="">
+            </div>
+        </div>
+        <div id="d2">
+            <div style="width: 85%;">
+                <p style="font-size: 37px; margin-bottom: -8px;"><b>Share your rides on rPool</b>, Bikepool & Carpool for Professionals </p>
+                <p>Intra-City services currently live in BANGALORE, HYDERABAD, PUNE, NEW DELHI-NCR and CHENNAI
+                Outstation services currently live across India</p>
+            </div>
+            <div style="width: 15%; padding-top: 50px; text-align: center;">
+                <img src="https://www.redbus.in/r-pool/images/googleplay.svg" alt="">
+                <img src="https://www.redbus.in/r-pool/images/ic_appstore.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="part2">
+        <div>
+            <a onclick="gotoworks()">How it works</a>
+            <a onclick="rpool_is()">What is rPool</a>
+            <a onclick="corporate()">Corporate</a>
+            <a onclick="rwa()">rPool for RWA's</a>
+            <a onclick="whyrpool()">why rPool</a>
+            <a onclick="reviews()">customer Review</a>
+            <a onclick="faqs()">FAQs</a>
+        </div>
+    </div>
+    <br><br>
+    <div id="part3">
+        <div style="width: 23%; text-align: center;">
+            <img id="div_imgs" src="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png">
+        </div>
+        <div style="width: 75%; color:#2b2b37;">
+            <h1 style="margin-left: 6%;">How it works</h1>
+            <button id="showRide" onclick="show_rides()" style="margin-left: 6%;">Find Rides</button>
+            <button id="offerRide" onclick="offer_rides()" style="margin-bottom: 50px;  margin-top:10px;">Offer Ride</button>
+            <div id="ride">
+                <div class="ridework" id="div1" onclick="account()">
+                    <div>1</div>
+                    <div id="heading1" style="width:65%;"><b>Activate</b> account.</div>
+                </div>
+                <div class="ridework" id="div2" onclick="request()">
+                    <div>2</div>
+                    <div id="heading2" style="width:65%;"><b>Request</b> a ride.</div>
+                </div>
+                <div class="ridework" id="div3" onclick="choose()">
+                    <div>3</div>
+                    <div id="heading3" style="width:65%;"><b>Choose</b> from ride.</div>
+                </div>
+                <div class="ridework" id="div2" onclick="pay()">
+                    <div>4</div>
+                    <div id="heading4" style="width:65%;"><b>Pay</b> using account.</div>
+                </div>
+            </div>
+            <hr style="width: 90%;">
+            <div id="texts">
+                <div style="width: 40%;">
+                    <ul>
+                        <li id="list1">Open / Download redbus App</li><br><br>
+                        <li id="list2">Verify your account by your official mail ID</li>
+                    </ul>
+                </div>
+                <div style="width: 40%;">
+                    <ul>
+                        <li id="list3">Go to rPool tab and activate your account</li><br><br>
+                        <li id="list4">Use this account to find / offer ride</li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+            <div id="offer"><b>50% off</b> on first 5 Rides upto Rs. 25/-</div>
+        </div>
+    </div>
+    <br><br>
+    <div id="part4">
+        <div>
+            <h1>What is rPool?</h1>
+            <p style="color:gray">rPool is an eco-smart option for handling all your travel needs by connecting you 
+                with fellow professional riders. As our cities are growing, increased traffic adds 
+                to the chaos and pollution. Hence, we have committed to providing a convenient, 
+                economical and sustainable solution to this problem through carpooling and bike pooling.</p>
+        </div>
+        <div id="video" style="margin-right:100px;"> 
+            <iframe 
+              width="600" 
+              height="300" 
+              src="https://www.youtube.com/embed/GIZlD2b2bn8" 
+              title="rPool by redBus - Bikepool and Carpool for Professionals" 
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div style="background-color: #f7f7f7; height: 45rem; ">
+        <div id="part5">
+            <h2>rPool within your city:</h2>
+            <p>Ridesharing is the best option for socially responsible citizens to commute 
+                within the city. Optimizing every ride, rPool makes it easy to find fellow 
+                riders on your route and split your commute costs.</p>
+        </div>
+        <div id="part6">
+            <h2>rPool within your city:</h2>
+            <p>Now, carpool/bikepool to destinations outside your city too! We are going the distance for you with outstation ridesharing on rPool.</p>
+            <br>
+            <div style="display:flex; justify-content: space-between;">
+                <div style="width:40%;">
+                    <img src="https://st.redbus.in/Images/rpools/safety.svg" alt="">
+                    <h3>Safety feature on the go!</h3>
+                    <p>With multiple safety features including the rPool Shield, Live Tracking and SOS Button, it is certainly safe to travel outside your city using rPool!</p>
+                </div>
+                <div style="width:50%;">
+                    <img src="https://st.redbus.in/Images/rpools/zeroCommision.svg" alt="">
+                    <h3>Pay zero commission!</h3>
+                    <p>Outstation ridesharing services by rPool are free of cost.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part7">
+        <div style="display:flex; justify-content: space-between;">
+            <div style="width:65%;">
+                <h2>rPool Corporate+, exclusive for Corporates</h2>
+                <h4>Say “goodbye” to getting frustrated with traffic and road rage and say “hello” to arriving fresh to work every morning.</h4>
+                <p style="color:rgb(97, 97, 97);">rPool Corporate+ is an exclusive bikepool and carpool model for corporates. rPool partners with corporates to provide carpooling and 
+                        bikepooling as an alternative to existing modes of employee commute. rPool Corporate+ pools employees commuting in the same routes 
+                        into a single ride, allowing them to travel smarter to work, save on commute costs, and make connections along the way.</p>
+            </div>
+            <div style="width:30%;">
+                <img style="width:100%" src="https://st.redbus.in/Images/rpools/corporates.svg" alt="">
+            </div>
+        </div>
+        <h3>How it works?</h3>
+        <ol style="color:rgb(97, 97, 97);">
+            <li>Every month, the company fills the rPool wallets of all employees who sign up as ride-takers on the rPool app</li><br>
+            <li>Employees who have signed up as ride-givers will create their carpool rides on rPool for daily commutes to the office</li><br>
+            <li>Based on their routes, the rPool app matches riders who can carpool together to work</li><br>
+            <li>On ride completion, the fares are automatically deducted from ride-takers’ rPool wallets, allowing for cash-free transactions</li><br>
+        </ol>
+        <h3>Benefits</h3>
+        <div style="display:flex; justify-content:space-around; color:rgb(97, 97, 97);">
+            <div style="width:50%;">
+                <ul>
+                    <li>Reduced exposure as employees travel to and from work with colleagues</li><br>
+                    <li>Reduced efforts in route optimization and seat planning in other modes of commute</li><br>
+                    <li>Both corporates and employees save money on employee transport and fuel</li><br>
+                </ul>
+            </div>
+            <div style="width:50%;">
+                <ul>
+                    <li>Employees enjoy the benefits of ridesharing and arrive fresh to work without having to take public transport</li><br>
+                    <li>Corporates can choose either prepaid or postpaid models</li><br>
+                    <li>Convenient pickup and drop points for employees</li><br>
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <div style="width: 100%; background-color: #f7f7f7;">
+        <div id="part8">
+            <div style="display:flex; justify-content: space-between;">
+                <div style="width:55%;">
+                    <h2>rPool for RWAs</h2>
+                    <p style="color:rgb(97, 97, 97);">An exclusive model for Gated Communities where we offer Carpooling and Bikepooling as a safer, smarter and reliable mode of commute. Making commute to work more economical and hassle-free for the residents.</p>
+                </div>
+                <div style="width:45%;">
+                    <img style="width:120%; margin-left:-80px;" src="https://st.redbus.in/Images/rpools/rwa.svg" alt="">
+                </div>
+            </div>
+            <h3>How it works?</h3>
+            <ol style="color:rgb(97, 97, 97);">
+                <li>rPool partners with community Resident Welfare Associations (RWAs) to promote ridesharing among residents</li><br>
+                <li>RWAs allow rPool to promote ridesharing among the residents by granting permissions for on-ground promotional activities.</li><br>
+                <li>RWAs share the promotional communications on society groups and mails</li><br>
+                <li>rPool customises offers and incentives exclusively for the RWAs</li><br>
+                <li>rPool contributes ₹50 and ₹200 to the RWA fund for each resident verifying as Ride-Giver and Ride-Taker respectively</li><br>
+                <li>For every 20 rPool rides happening from/to the society in a month, rPool will contribute ₹500 to the RWA funds (capped to a maximum of ₹2500 per month)</li><br>
+            </ol>
+            <h3>Benefits</h3>
+            <div style="display:flex; justify-content:space-around; color:rgb(97, 97, 97);">
+                <div style="width:50%;">
+                    <ul>
+                        <li>Adds to the suite of travel options for residents, enabling safer and cheaper commute to work</li><br>
+                        <li>Employees enjoy the benefits of ridesharing and arrive fresh to work without having to take public transport</li><br>
+                        <li>Reduced efforts in route optimization and seat planning in other modes of commute</li><br>
+                    </ul>
+                </div>
+                <div style="width:50%;">
+                    <ul>
+                        <li>Corporates can choose either prepaid or postpaid models</li><br>
+                        <li>Both corporates and employees save money on employee transport and fuel</li><br>
+                        <li>Convenient pickup and drop points for employees</li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <div id="part9">
+        <h2>Why redBus rPool?</h2>
+        <div style="display:flex;">
+            <div style="width:80%; margin: auto;">
+                <div style="display:flex;">
+                    <div>
+                        <div>
+                            <h4>Travel Smart with Insurance</h4>
+                            <p>We wish you a safe trip every time. That’s why when you ride on rPool, we cover every trip with insurance</p>
+                        </div>
+                        <div>
+                            <h4>Save More on every ride</h4>
+                            <p>With rPool you get the best value for rides with opportunities to earn bonus rPool points through great offers</p>
+                        </div>
+                        <div>
+                            <h4>No Transaction Charges</h4>
+                            <p>We believe in making every ride even more pleasant, therefore enjoy your pool without any transaction charges.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Privacy Protectede</h4>
+                            <p>Your details are kept safe with us. When you call fellow travellers, the call is routed through the app with phone masking enabled.</p>
+                        </div>
+                        <div>
+                            <h4>Networking on the go</h4>
+                            <p>Create new friendships with your fellow bikepoolers or carpoolers. Connect with various professionals and enjoy networking while on your rides.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <br><br>
+    <div style="width: 100%; background-color: #ededed;">
+        <div id="part10">
+            <div>
+                <h1>Introducing rPool Points</h1>
+                <p class="tags">Load an amount into your rPool Wallet to use for your rides.</p>
+            </div>
+            <div>
+                <img src="https://s1.rdbuz.com/rbpool/rpool_points/ic_recharge.svg" alt="">
+                <h3>RECHARGE</h3>
+                <p class="tags">Add an amount with a choice of netbanking, credit/debit cards and wallets.</p>
+            </div>
+            <div>
+                <img src="https://s1.rdbuz.com/rbpool/rpool_points/img_auto_debit_points.svg" alt="">
+                <h3>AUTO DEBIT/CREDIT</h3>
+                <p class="tags">Set your points for auto debit after each ride.</p>
+            </div>
+            <div>
+                <img src="https://s1.rdbuz.com/rbpool/rpool_points/ic_redeem.svg" alt="">
+                <h3>REDEEM</h3>
+                <p class="tags">Your points can be redeemed against TMW Card & Amazon Gift Card as well.</p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center;">Customer Reviews</h1>
+    <div id="reviews" style="display: flex;">        
+        <div>
+            <h3 style="color:black;">Sagar nagare</h3>
+            <p>Good experience, I am expecting it to launch in Mumbai soon!</p>
+        </div>
+        <div>
+            <h3 style="color:black;"> Kunal dubey</h3>
+            <p>Good initiative by redBus, It is very enoyable and price is cheap too.</p>
+        </div>
+        <div>
+            <h3 style="color:black;">Avishesk</h3>
+            <p>Amazing. Ilove using it & love inviting my friends to it.</p>
+        </div>
+    </div><br><br>
+    <div id="reviews" style="display: flex;">        
+        <div>
+            <h3 style="color:black;">Ajinkya</h3>
+            <p>it is just awesome. Mostly my travel experience has been amazing.</p>
+        </div>
+        <div>
+            <h3 style="color:black;">Priyash</h3>
+            <p>It was really wonderful.</p>
+        </div>
+        <div>
+            <h3 style="color:black;">Rajesh G</h3>
+            <p>I love using it. They give really good service</p>
+        </div>
+    </div>
+    <div id="block4">
+        <div style="padding-bottom: 24px;font-weight: bold; font-size: 28px; line-height: 34px;">FAQ</div>
+        <div style="font-size: 20px;line-height: 24px;">
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How can I complete an online train ticket booking with redRail?</b></div>
+                <div>Booking a train ticket online can be completed with ease in just a few simple steps. If you’re
+                    on the app, first click on the “redRail” icon that’s displayed on your screen. Enter the source
+                    and destination locations along with the date of travel. Once done, a list of trains operating
+                    on your route will be displayed. Select the train and class of your choice, select the boarding
+                    station, enter your registered IRCTC id, enter the details of the passenger and complete the
+                    payment. After the payment, enter the IRCTC password and that's it - your tickets will be
+                    booked. You will receive an email, a WhatsApp message and a text message containing details of
+                    your booking.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Do I need to make an account on the redBus platform to complete my IRCTC train ticket
+                        booking online?</b></div>
+                <div>Yes, and this has its advantages. This would help expedite the booking process when you have to
+                    enter details about the passenger and while completing the payment process.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How is redRail connected to redBus?</b></div>
+                <div>redRail is a new product that’s offered by redBus. Utilising its massive successful experience
+                    in the bus industry, redBus aims to attain the same success in the train travel domain as well.
+                    A customer can view, book, and complete their payment of train tickets on the redBus app by
+                    clicking on the “redRail” option that’s provided.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How do I cancel a train ticket booked through redRail?</b></div>
+                <div>Cancelling an online train ticket booking through redRail can be done as easily as booking a
+                    train ticket. When you view the details of your train ticket booking on the app under My
+                    Bookings, you are presented with the option to cancel the ticket. You can either select some of
+                    the passengers or all the passengers to cancel and then proceed. A small cancellation fee might
+                    be charged based on the timing of your cancellation request as per IRCTC cancellation and refund
+                    policy.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How do I pay for my online train ticket booking that is made through redRail?</b></div>
+                <div>You can complete your online train ticket booking by using any of the variety of payment
+                    options that are available at your disposal. Customers can use any amount that’s remaining in
+                    their redBus wallet, credit or debit cards, Wallets such as Amazon Pay or through UPI payment
+                    gateways such as GooglePay, PhonePe, etc. Payments made online on redRail are safe & secure and
+                    eliminate the need to wait in a queue.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Are there any cancellation charges levied when a train ticket is cancelled?</b></div>
+                <div>Yes, there are. Depending on when the cancellation was initiated, an amount might get deducted
+                    as per the cancellation and refund rules of IRCTC and Indian Railways.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How many people can I book on a single train ticket booking?</b></div>
+                <div>Customers can book a maximum of 6 passengers in a single train ticket booking that’s made
+                    through redRail. However, in the case of Tatkal ticket, customers can book a maximum of 4
+                    passengers in a single ticket booking through redRail.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>What are some of the advantages of booking a train ticket with redRail?</b></div>
+                <div>One of the key advantages of making an online train ticket booking with redRail is convenience.
+                    In the current environment where safety and social distancing is a priority, customers can view,
+                    select, and make their payments online from the comfort of their homes. redRail displays vital
+                    information about their train journey.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Do I get the option to select my seat or berth on the train?</b></div>
+                <div>Yes, you can. While entering the details of the passenger, you can select the berth of your
+                    choice. If there are multiple seats booked through one booking, you can select a berth for each
+                    passenger individually. You also get the option to make a reservation preference such as book
+                    only if all berths/seats are allotted in the same coach, book only if one or two lower berths
+                    are allotted, and more.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Should I book my train ticket in advance?</b></div>
+                <div>It is advisable to complete your online train ticket booking through redRail in advance as this
+                    would ensure that you have more choices when it comes to the trains operating on your route as
+                    well as ensures that you have more options related to selecting the berth of your choice.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Where can I view the train ticket that I have booked through redRail?</b></div>
+                <div>After you have successfully booked a train ticket through redRail, you will receive an email, a
+                    WhatsApp message and a text message containing the details about your booking. You can also view
+                    your bookings under the “My Bookings” section of the redBus app.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Can I book a train ticket under the Tatkal quota through redRail?</b></div>
+                <div>Yes, you can book Tatkal quota train tickets through redRail. With the convenience of viewing
+                    updated trains and their berth availability, it is advisable to complete your online train
+                    ticket booking at the earliest through redRail.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Are there any offers that can be availed when making an online train ticket booking on
+                        redRail?</b></div>
+                <div>Yes. redRail offers are provided regularly and the offer details can be found on the redRail
+                    homepage or the app. Enter the offer code at the time of making your payment and avail a
+                    discount on your train tickets online.</div>
+            </div><br>
+
+            <div>
+                <div><b>Do I need to carry any documents with me while I board my train?</b></div>
+                <div>You do not require a photo ID when you book your train ticket through redRail, but, you will
+                    need to carry an ID when you board the train. IDs such as PAN card, Voter ID, Driving Licence,
+                    Aadhar card or any other photo ID that has a serial number issued by the Central/State
+                    Government.</div>
+            </div><br>
+        </div>
+    </div>
+    <div id="part11">
+        <div>
+            <h3 style="color:black;">Car Pool Cities</h3>
+            <p>Car Pool In Bangalore</p>
+            <p>Car Pool In Hyderabad</p>
+            <p>Car Pool In Mumbai</p>
+            <p>Car Pool In Delhi</p>
+        </div>
+        <div><br>
+            <br>
+            <p>Car Pool In Pune</p>
+            <p>Car Pool In Chennai</p>
+            <p>Car Pool In Kolkata</p>
+        </div>
+        <div>
+            <h3 style="color:black;">Bike Pool Cities</h3>
+            <p>Bike Pool In Bangalore</p>
+            <p>Bike Pool In Hyderabad</p>
+            <p>Bike Pool In Mumbai</p>
+            <p>Bike Pool In Delhi</p>
+        </div>
+        <div><br>
+            <br>
+            <p>Bike Pool In Pune</p>
+            <p>Bike Pool In Chennai</p>
+            <p>Bike Pool In Kolkata</p>
+        </div>      
+    </div>
+    <div id="block5">
+        <div class="left-block">
+            <div class="footer-col">
+                <p class="footer-col-heading">About Redbus</p>
+                <ul class="footer-list">
+                    <li><a class="footer-links" href="https://www.redbus.in/info/aboutus">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-heading">About Redbus</p>
+                <ul class="footer-list">
+                    <li><a class="footer-links" href="https://www.redbus.in/info/termscondition">T&ampC</a></li>
+                    <li><a class="footer-links" href="https://www.redbus.in/info/privacypolicy">Privacy Policy</a></li>
+                    <li><div class="footer-links" onclick="faqClick()">FAQ</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-block">
+            <div style="display: inline;"><img src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"></div>
+            <p class="footer-about">redBus is the world's largest online bus ticket booking service trusted by over 8
+                million happy customers globally. redBus offers bus ticket booking through its website,iOS and
+                Android mobile apps for all major routes.</p>
+            <p class="footer-about">Ⓒ 2021 ibibogroup All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+let faqClick = () => {
+    var ele = document.getElementById("block4");
+    ele && ele.scrollIntoView(true);
+    window.scrollBy(0, -100);
+    }
+let gotoworks = () => {
+    var el = document.getElementById("part7");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, 275);
+}
+let rpool_is = () => {
+    var el = document.getElementById("part4");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, -30);
+}
+let corporate = () => {
+    var el = document.getElementById("part7");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, -60);
+}
+let rwa = () => {
+    var el = document.getElementById("part8");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, -60);
+}
+let whyrpool = () => {
+    var el = document.getElementById("part9");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, -100);
+}
+let reviews = () => {
+    var el = document.getElementById("reviews");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, -200);
+}
+let faqs = () => {
+    var el = document.getElementById("part10");
+    el && el.scrollIntoView(true);
+    window.scrollBy(0, 750);
+}
+
+
+let button1 = document.getElementById("showRide");
+let button2 = document.getElementById("offerRide");
+
+let fonts = () => {
+    document.getElementById("list1").style.fontsize = "30px";
+    document.getElementById("list2").style.fontsize = "30px";
+    document.getElementById("list3").style.fontsize = "30px";
+    document.getElementById("list4").style.fontsize = "30px";
+}
+
+let show_rides = () => {
+  button1.style.backgroundColor = "#3e3e52";
+  button2.style.backgroundColor = "#ffffff";
+  button1.style.color = "#ffffff";
+  button2.style.color = "#3e3e52";
+
+  document.getElementById("offer").innerText = "50% off on first 5 Rides upto Rs. 25/-";
+  document.getElementById("heading1").innerText = "Activate account";
+  document.getElementById("heading2").innerText = "Request a ride";
+  document.getElementById("heading3").innerText = "Choose from ride";
+  document.getElementById("heading4").innerText = "Pay using points";
+}
+
+let offer_rides = () => {
+  button2.style.backgroundColor = "#3e3e52";
+  button1.style.backgroundColor = "#ffffff";
+  button2.style.color = "#ffffff";
+  button1.style.color = "#3e3e52";
+
+  document.getElementById("offer").innerText = "Rs 1000/- EXTRA for 20 seats given every week";
+  document.getElementById("heading1").innerText = "Activate account";
+  document.getElementById("heading2").innerText = "Offer a ride";
+  document.getElementById("heading3").innerText = "Choose from ride";
+  document.getElementById("heading4").innerText = "Get points";
+};
+
+let account = () => {
+    document.getElementById("div_imgs").src = "https://s2.rdbuz.com/rbpool/how_it_works/screens/bc_img_find_active.png";
+    document.getElementById("list1").innerText = "Open / Download redbus App";
+    document.getElementById("list2").innerText = "Verify your account by your official mail ID";
+    document.getElementById("list3").innerText = "Go to rPool tab and activate your account";
+    document.getElementById("list4").innerText = "Use this account to find / offer ride";
+    document.getElementById("offer").innerText = "50% off on first 5 Rides upto Rs. 25/-";
+    fonts();
+}
+
+let request = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_request.png";
+    document.getElementById("list1").innerText = "Tell us your start point and destination";
+    document.getElementById("list2").innerText = "Schedule repeat rides for easy use";
+    document.getElementById("list3").innerText = "Choose no. of seats, date and time";
+    document.getElementById("list4").innerText = "";
+    document.getElementById("offer").innerText = "Bikepool or Carpool easier by setting recurring rides";
+    fonts();
+}
+
+let choose = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_choose.png";
+    document.getElementById("list1").innerText = "Choose from a list of verified bike or car owners to pool with";
+    document.getElementById("list2").innerText = "Track your ride ontime";
+    document.getElementById("list3").innerText = "Contact your rider without sharing number";
+    document.getElementById("list4").innerText = "Join the ride from the pickup point";
+    document.getElementById("offer").innerText = "Enjoy secure calls and chats with phone masking";
+    fonts();
+}
+
+let pay = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png";
+    document.getElementById("list1").innerText = "Open / Download redbus App";
+    document.getElementById("list2").innerText = "Auto-debit payments using points, (No variable cost & No cash payment)";
+    document.getElementById("list3").innerText = "Before ride buy points using credit card & Netbanking";
+    document.getElementById("list4").innerText = "Rate your rider and save as them as favorite to ride with them again";
+    document.getElementById("offer").innerText = "Ride worry-free with the auto-debit points payment";
+    fonts();
+}
+
+</script>
