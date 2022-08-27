@@ -734,4 +734,42 @@ margin-left: -5px;
   }
 
  }
-
+      /* js */
+      #radio_button,#radio_button_1,#radio_button_2,#c_b{
+        display: flex;
+        width: fit-content;
+        padding: 8px;
+        gap: 10px;
+       
+    }#radio_button_1,#radio_button_2{
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 5px;
+        margin:20px 0 10px 20px;
+        cursor: pointer;
+    }
+     .margin{
+        margin:20px 0 20px 20px;
+    }
+     #c_b{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }#cab,#bus{
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 8px;
+        cursor: pointer;
+    
+    }
+    h4{
+        margin: 0 0 20px 20px;
+    }
+    #cab:hover,#bus:hover,#radio_button_1:hover,#radio_button_2:hover{
+         border:3px solid maroon;
+    }
+    
+    #div{
+       display: none;
+      
+    }
