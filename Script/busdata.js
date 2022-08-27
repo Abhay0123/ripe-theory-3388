@@ -52,6 +52,7 @@ const busdata = [
 ]
 showdata()
 function showdata(from, to, date) {
+    document.getElementById("all_bus_data").innerHTML = null
     busdata.forEach((el, i) => {
         let div1 = document.createElement("div")
         div1.className = "one"
@@ -81,7 +82,7 @@ function showdata(from, to, date) {
         people.innerText = `Rated by : ${el.price - 127}`
         let price = el.price
         let pp = document.createElement("p")
-        pp.innerText = `${el.price} Seats available`
+        pp.innerText = `${el.seats} Seats available`
         let seats = pp
 
 
@@ -153,12 +154,61 @@ function book(el, i) {
 
         let lower_deck = document.createElement("div")
         lower_deck.id = "lower_deck"
-        let a = document.createElement("img")
-        a.src = "./Images/seatlogo.png"
-        lower_deck.append(a)
+        let a = document.createElement("div")
+        for (let i = 0; i < 10; i++) {
+            let ppp = document.createElement("button")
+            ppp.innerHTML = `<span class="material-symbols-outlined">living</span>`
+            ppp.id = `S${i + 1}`
+            ppp.value = "true"
+            ppp.onclick = function () {
+                seat_select(el)
+            }
+            a.append(ppp)
+        }
+        let b = document.createElement("div")
+        for (let i = 10; i < 20; i++) {
+            let ppp = document.createElement("button")
+            ppp.innerHTML = `<span class="material-symbols-outlined">living</span>`
+            ppp.id = `S${i + 1}`
+            ppp.value = "true"
+            ppp.onclick = function () {
+                seat_select(el)
+            }
+            b.append(ppp)
+        }
+
+        let mid = document.createElement("div")
+        mid.id = "mid"
+
+        let c = document.createElement("div")
+        for (let i = 20; i < 26; i++) {
+            let ppp = document.createElement("button")
+            ppp.innerHTML = `<span class="material-symbols-outlined" class="sleeper"> airline_seat_flat</span>`
+            ppp.id = `SP${i + 1}`
+            ppp.onclick = function () {
+                seat_select(el)
+            }
+            ppp.value = "true"
+            c.append(ppp)
+        }
+
+        let outer = document.createElement("div")
+        outer.id = "outer"
+        outer.append(a, b, mid, c)
+
+        let driver = document.createElement("div")
+        driver.id = "driver"
+        driver.innerHTML = `<span class="material-symbols-outlined">
+        block
+        </span>`
+        lower_deck.append(outer, driver)
+        a.className = "seat_svg"
+        b.className = "seat_svg"
+        c.className = "sleeper_svg"
 
 
-        left.append(notice,lower_deck)
+
+        left.append(notice, lower_deck)
 
 
         // right  column
@@ -174,7 +224,7 @@ function book(el, i) {
         let rp24 = document.createElement("p")
         rp24.innerText = "Unavailable"
         let rp3 = document.createElement("h4")
-        rp2.append(rp21,rp22,rp23,rp24)
+        rp2.append(rp21, rp22, rp23, rp24)
         rp3.innerText = "REDDEAL"
         let rp4 = document.createElement("p")
         rp4.innerText = "Get 13 % Extra OFF"
@@ -184,24 +234,175 @@ function book(el, i) {
         rp6.innerText = "Minimum ticket fare : INR 300"
         let rp7 = document.createElement("p")
         rp7.innerText = "Maximum discount limit : INR 50"
-        right.append(rp1,rp2,rp3,rp4,rp5,rp6,rp7)
+        right.append(rp1, rp2, rp3, rp4, rp5, rp6, rp7)
 
-        cont.append(left,right)
+        cont.append(left, right)
 
 
 
-        div.append(seatprice,cont)
+        div.append(seatprice, cont)
 
 
 
         let y = event.target.parentNode.parentNode
         y.append(div)
-        console.log(y)
         event.target.innerText = "HIDE SEATS"
 
     } else {
         window.location.reload()
         event.target.innerText = "VIEW SEATS"
     }
+}
+let seatarr = []
+function seat_select(el) {
+    let x = event.target.parentNode.value
+
+    if (x == "true") {
+        let seatno = event.target.parentNode.id
+        seatarr.push(seatno)
+
+        event.target.parentNode.value = "false"
+        event.target.parentNode.style.backgroundColor = "grey"
+
+    } else {
+        let seatno = event.target.parentNode.id
+        for (let i = 0; i < seatarr.length; i++) {
+            if (seatarr[i] == seatno) {
+                seatarr.splice(i, 1)
+            }
+        }
+        event.target.parentNode.value = "true"
+        event.target.parentNode.style.backgroundColor = "white"
+    }
+    if (seatarr.length > 0) {
+
+        document.getElementById("cont_right").innerHTML = null
+        let first = document.createElement("div")
+        first.id = "first"
+
+        let pick = document.createElement("p")
+        pick.innerText = "BOARDING POINT"
+        pick.onclick = function () {
+            pickpoint(el)
+        }
+        let drop = document.createElement("p")
+        drop.innerText = "DROPPING POINT"
+        drop.onclick = function () {
+            droppoint(el)
+        }
+        first.append(pick, drop)
+
+
+        let second = document.createElement("div")
+        second.id = "second"
+
+        let Depature = document.createElement("p")
+        Depature.innerText = el.Depature
+        Depature.id = "time"
+        let arrival = document.createElement("p")
+        arrival.innerText = el.pickup
+        arrival.id = "locationpoint"
+        second.append(Depature, arrival)
+
+
+        let third = document.createElement("div")
+        third.id = "third"
+
+        let statment = document.createElement("p")
+        statment.innerText = "Amount( Taxes will be calculated during payment )"
+        let net = document.createElement("p")
+        net.innerText = `INR ${el.price * seatarr.length}`
+        net.style.fontWeight = "bold"
+        third.append(statment, net)
+
+        let continu = document.createElement("div")
+        continu.innerText = "CONTINUE"
+        continu.id = "continue"
+        continu.onclick = function () {
+            process_continue(el, seatarr)
+        }
+
+
+        document.getElementById("cont_right").append(first, second, third, continu)
+        document.getElementById("cont_right").style.fontSize = "13px"
+        document.getElementById("cont_right").style.backgroundColor = "white"
+
+    } else {
+        // right  column
+        document.getElementById("cont_right").innerHTML = null
+        let rp1 = document.createElement("h4")
+        rp1.innerText = "SEAT LEGEND"
+        let rp2 = document.createElement("div")
+        let rp21 = document.createElement("input")
+        let rp22 = document.createElement("p")
+        rp22.innerText = "Available"
+        let rp23 = document.createElement("input")
+        let rp24 = document.createElement("p")
+        rp24.innerText = "Unavailable"
+        let rp3 = document.createElement("h4")
+        rp2.append(rp21, rp22, rp23, rp24)
+        rp3.innerText = "REDDEAL"
+        let rp4 = document.createElement("p")
+        rp4.innerText = "Get 13 % Extra OFF"
+        let rp5 = document.createElement("p")
+        rp5.innerText = "Terms and Conditions::"
+        let rp6 = document.createElement("p")
+        rp6.innerText = "Minimum ticket fare : INR 300"
+        let rp7 = document.createElement("p")
+        rp7.innerText = "Maximum discount limit : INR 50"
+        document.getElementById("cont_right").append(rp1, rp2, rp3, rp4, rp5, rp6, rp7)
+        document.getElementById("cont_right").style.backgroundColor = "#eeeded"
+    }
+}
+
+
+function droppoint(el) {
+    document.getElementById("locationpoint").innerText = el.drop
+    document.getElementById("time").innerText = el.arrival
+}
+
+function pickpoint(el) {
+    document.getElementById("locationpoint").innerText = el.pickup
+    document.getElementById("time").innerText = el.Depature
+}
+function process_continue(el, seatarr) {
+    let payment = document.createElement("div")
+    payment.id = "payment_page"
+
+    let pay_side = document.createElement("div")
+    pay_side.id = "pay_side"
+
+
+    let pay_side2 = document.createElement("div")
+    pay_side2.id = "pay_side2"
+    // side one
+    let one = document.createElement("div")
+    one.id = "side_one"
+    let close = document.createElement("div")
+    close.id = "side_close"
+    close.innerHTML = `<span class="material-symbols-outlined">
+    double_arrow
+    </span>`
+    let head = document.createElement("h2")
+    head.id = "side_Head"
+    head.innerText = `Passenger Details`
+    one.append(close,head)
+
+
+    let two = document.createElement("div")
+    two.id = "side_two"
+
+    let three = document.createElement("div")
+    three.id = "side_three"
+
+    pay_side2.append(one, two, three)
+
+
+
+    payment.append(pay_side, pay_side2)
+
+
+    document.querySelector("#payment").append(payment)
 
 }
+
