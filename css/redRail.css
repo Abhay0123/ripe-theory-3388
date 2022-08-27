@@ -1,0 +1,132 @@
+#nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    background-color: #d84e55;
+    color: rgb(243, 243, 243);
+    font-family: "Montserrat";
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+#nav > a{
+    margin-top: 9px;
+    color: white;
+    text-decoration: none;
+}
+#block1{
+    width: 100%;
+    height: 40rem;
+    margin: auto;
+    text-align: center;
+    background-color: #d84e55;
+    margin-top: 5rem;
+}
+#block1 > div{
+    /* border:1px solid white; */
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 25px;
+}
+#block2{
+    text-align: center;
+}
+#whybook{
+    width: 80%;
+    height: 14rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid transparent;            
+}
+#whybook > div{
+    width: 16rem;
+    border: 1px solid transparent;
+    font-size: 19px;
+                
+}
+#whybook > div > img{
+    width: 65px;
+    height: 65px;
+}
+#whybook > div > p{
+    margin-top: -15px;
+}
+#block3{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px;
+    background-color: #f7f7f7;
+}
+#list_wrap{
+    font-size: 16px;
+    line-height: 20px;
+    float: left;
+    width: 40%;
+    padding-left: 150px;
+}
+#list_wrap > div{
+    margin-bottom: 12px;
+    padding: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid #3E3E52;
+    border-radius: 8px;
+}
+#imgs{
+    width: 40rem;
+}
+#block4{
+    background: #FFFFFF;
+    padding: 48px 10%;
+    color: #3E3E52;
+}
+#block5{
+    padding: 3em 7em;
+    display: flex;
+    background: #1a2230;
+    color: #fff;
+}
+.left-block{
+    width: 70%;
+    display: flex;
+}
+.right-block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-about{
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.footer-col-heading{
+    font-weight: 700;
+    color: #797979;
+}
+.footer-list{
+list-style: none;
+margin: 0;
+padding: 0;
+border: 0;
+}
+.footer-links{
+text-decoration: none; 
+color: #d7d7d7; 
+font-size: 20px; 
+line-height: 2;
+cursor: pointer;
+}
