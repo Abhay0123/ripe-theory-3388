@@ -319,7 +319,7 @@ body {
     width: 60%;
     height: 100vh;
     background-color: grey;
-    opacity: 0.8;
+    opacity: 0.1;
 
 }
 #pay_side2{
@@ -331,6 +331,111 @@ body {
 #side_one{
     display: flex;
     padding: 20px 0;
-    justify-content: space-around;
+    column-gap: 50px;
+    height: 10vh;
+}
+#side_two>div>div{
+    display: flex;
+    gap: 30px;
+    margin: 10px 0;
+}
+#side_two{
+display: grid;
+row-gap: 20px;
+align-content: flex-start;
+height: 75vh;
+overflow: auto;
+}
+#side_two>div{
+    padding: 20px 30px;
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 15px;
+    width: 90%;
+    margin: auto;
+}
+#side_two>div>div>p+p{
+    border-left: 1px solid;
+    padding-left: 20px;
+    color: rgb(14, 149, 202);
+    font-weight: 900;
+    
+}
+#side_two>div>input{
+    padding: 5px;
+    width: 90%;
+    font-size: 17px;
+}
+#side_two>div>div>:first-child>div{
+    display: flex;
+    column-gap: 2px;
+}
+#side_two>div>div>:first-child>div>:nth-child(3){
+    margin-left: 10px;
+}
+#side_two>div>:last-child{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+#side_two>div>:last-child>div{
+    display: grid;
+    row-gap: 20px;
+}
+#side_two>div>:last-child>:first-child>div{
+display: flex;
+align-items: center;
 }
     
+
+#side_two>div>:last-child>:last-child input{
+    width: 80px;
+    padding: 10px 0;
+    text-align: center;
+}
+#contact_msg>:first-child{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+   border: none;
+   color: rgb(201, 149, 6);
+
+}
+#contact_msg>:nth-child(2){
+    background-color: yellow;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+#contact_msg>:nth-child(4){
+    margin-bottom: 10px;
+}
+
+#side_three{
+    border-top: 1px solid grey;
+    padding: 10px;
+}
+#side_three>p{
+    width: 90%;
+    font-size: 14px;
+    margin: 10px auto;
+    
+    
+}
+#side_three>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+#side_three>div>:first-child{
+    font-weight: bold;
+}
+#side_three>div>:last-child{
+    font-weight: bold;
+    background-color: #d84f57;
+    color: white;
+    padding: 10px;
+    border: none;
+}
