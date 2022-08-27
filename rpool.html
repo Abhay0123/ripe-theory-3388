@@ -267,7 +267,9 @@ cursor: pointer;
     border: 1px solid gray;
     cursor: pointer;
 }
+button:hover{
 
+}
 </style>
 </head>
 <body>
@@ -314,42 +316,42 @@ cursor: pointer;
     <br><br>
     <div id="part3">
         <div style="width: 23%; text-align: center;">
-            <img src="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png">
+            <img id="div_imgs" src="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png">
         </div>
         <div style="width: 75%; color:#2b2b37;">
             <h1 style="margin-left: 6%;">How it works</h1>
-            <button style="margin-left: 6%;">Find Rides</button>
-            <button style="margin-bottom: 50px;  margin-top:10px;">Offer Ride</button>
+            <button id="showRide" onclick="show_rides()" style="margin-left: 6%;">Find Rides</button>
+            <button id="offerRide" onclick="offer_rides()" style="margin-bottom: 50px;  margin-top:10px;">Offer Ride</button>
             <div id="ride">
-                <div class="ridework">
+                <div class="ridework" id="div1" onclick="account()">
                     <div>1</div>
-                    <div style="width:65%;"><b>Activate</b> account.</div>
+                    <div id="heading1" style="width:65%;"><b>Activate</b> account.</div>
                 </div>
-                <div class="ridework">
+                <div class="ridework" id="div2" onclick="request()">
                     <div>2</div>
-                    <div style="width:65%;"><b>Request</b> a ride.</div>
+                    <div id="heading2" style="width:65%;"><b>Request</b> a ride.</div>
                 </div>
-                <div class="ridework">
+                <div class="ridework" id="div3" onclick="choose()">
                     <div>3</div>
-                    <div style="width:65%;"><b>Choose</b> from ride.</div>
+                    <div id="heading3" style="width:65%;"><b>Choose</b> from ride.</div>
                 </div>
-                <div class="ridework">
+                <div class="ridework" id="div2" onclick="pay()">
                     <div>4</div>
-                    <div style="width:65%;"><b>Pay</b> using account.</div>
+                    <div id="heading4" style="width:65%;"><b>Pay</b> using account.</div>
                 </div>
             </div>
             <hr style="width: 90%;">
             <div id="texts">
                 <div style="width: 40%;">
                     <ul>
-                        <li>Open / Download redbus App</li><br><br>
-                        <li>Verify your account by your official mail ID</li>
+                        <li id="list1">Open / Download redbus App</li><br><br>
+                        <li id="list2">Verify your account by your official mail ID</li>
                     </ul>
                 </div>
                 <div style="width: 40%;">
                     <ul>
-                        <li>Go to rPool tab and activate your account</li><br><br>
-                        <li>Use this account to find / offer ride</li>
+                        <li id="list3">Go to rPool tab and activate your account</li><br><br>
+                        <li id="list4">Use this account to find / offer ride</li>
                     </ul>
                 </div>
             </div>
@@ -739,24 +741,22 @@ cursor: pointer;
 </body>
 </html>
 <script>
-    let faqClick = () => {
+
+let faqClick = () => {
     var ele = document.getElementById("block4");
     ele && ele.scrollIntoView(true);
     window.scrollBy(0, -100);
     }
-
 let gotoworks = () => {
     var el = document.getElementById("part7");
     el && el.scrollIntoView(true);
     window.scrollBy(0, 275);
 }
-
 let rpool_is = () => {
     var el = document.getElementById("part4");
     el && el.scrollIntoView(true);
     window.scrollBy(0, -30);
 }
-
 let corporate = () => {
     var el = document.getElementById("part7");
     el && el.scrollIntoView(true);
@@ -781,6 +781,83 @@ let faqs = () => {
     var el = document.getElementById("part10");
     el && el.scrollIntoView(true);
     window.scrollBy(0, 750);
+}
+
+
+let button1 = document.getElementById("showRide");
+let button2 = document.getElementById("offerRide");
+
+let fonts = () => {
+    document.getElementById("list1").style.fontsize = "30px";
+    document.getElementById("list2").style.fontsize = "30px";
+    document.getElementById("list3").style.fontsize = "30px";
+    document.getElementById("list4").style.fontsize = "30px";
+}
+
+let show_rides = () => {
+  button1.style.backgroundColor = "#3e3e52";
+  button2.style.backgroundColor = "#ffffff";
+  button1.style.color = "#ffffff";
+  button2.style.color = "#3e3e52";
+
+  document.getElementById("offer").innerText = "50% off on first 5 Rides upto Rs. 25/-";
+  document.getElementById("heading1").innerText = "Activate account";
+  document.getElementById("heading2").innerText = "Request a ride";
+  document.getElementById("heading3").innerText = "Choose from ride";
+  document.getElementById("heading4").innerText = "Pay using points";
+}
+
+let offer_rides = () => {
+  button2.style.backgroundColor = "#3e3e52";
+  button1.style.backgroundColor = "#ffffff";
+  button2.style.color = "#ffffff";
+  button1.style.color = "#3e3e52";
+
+  document.getElementById("offer").innerText = "Rs 1000/- EXTRA for 20 seats given every week";
+  document.getElementById("heading1").innerText = "Activate account";
+  document.getElementById("heading2").innerText = "Offer a ride";
+  document.getElementById("heading3").innerText = "Choose from ride";
+  document.getElementById("heading4").innerText = "Get points";
+};
+
+let account = () => {
+    document.getElementById("div_imgs").src = "https://s2.rdbuz.com/rbpool/how_it_works/screens/bc_img_find_active.png";
+    document.getElementById("list1").innerText = "Open / Download redbus App";
+    document.getElementById("list2").innerText = "Verify your account by your official mail ID";
+    document.getElementById("list3").innerText = "Go to rPool tab and activate your account";
+    document.getElementById("list4").innerText = "Use this account to find / offer ride";
+    document.getElementById("offer").innerText = "50% off on first 5 Rides upto Rs. 25/-";
+    fonts();
+}
+
+let request = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_request.png";
+    document.getElementById("list1").innerText = "Tell us your start point and destination";
+    document.getElementById("list2").innerText = "Schedule repeat rides for easy use";
+    document.getElementById("list3").innerText = "Choose no. of seats, date and time";
+    document.getElementById("list4").innerText = "";
+    document.getElementById("offer").innerText = "Bikepool or Carpool easier by setting recurring rides";
+    fonts();
+}
+
+let choose = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_choose.png";
+    document.getElementById("list1").innerText = "Choose from a list of verified bike or car owners to pool with";
+    document.getElementById("list2").innerText = "Track your ride ontime";
+    document.getElementById("list3").innerText = "Contact your rider without sharing number";
+    document.getElementById("list4").innerText = "Join the ride from the pickup point";
+    document.getElementById("offer").innerText = "Enjoy secure calls and chats with phone masking";
+    fonts();
+}
+
+let pay = () => {
+    document.getElementById("div_imgs").src ="https://s2.rdbuz.com/rbpool/how_it_works/screens/img_find_pay.png";
+    document.getElementById("list1").innerText = "Open / Download redbus App";
+    document.getElementById("list2").innerText = "Auto-debit payments using points, (No variable cost & No cash payment)";
+    document.getElementById("list3").innerText = "Before ride buy points using credit card & Netbanking";
+    document.getElementById("list4").innerText = "Rate your rider and save as them as favorite to ride with them again";
+    document.getElementById("offer").innerText = "Ride worry-free with the auto-debit points payment";
+    fonts();
 }
 
 </script>
