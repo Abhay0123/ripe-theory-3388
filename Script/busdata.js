@@ -366,8 +366,10 @@ function pickpoint(el) {
     document.getElementById("time").innerText = el.Depature
 }
 function process_continue(el, seatarr) {
+    console.log(seatarr)
     let payment = document.createElement("div")
     payment.id = "payment_page"
+    
 
     let pay_side = document.createElement("div")
     pay_side.id = "pay_side"
@@ -380,6 +382,9 @@ function process_continue(el, seatarr) {
     one.id = "side_one"
     let close = document.createElement("div")
     close.id = "side_close"
+    close.onclick = function(){
+        closepopup()
+    }
     close.innerHTML = `<span class="material-symbols-outlined">
     double_arrow
     </span>`
@@ -392,8 +397,113 @@ function process_continue(el, seatarr) {
     let two = document.createElement("div")
     two.id = "side_two"
 
+   for(let i=0;i<seatarr.length;i++){
+    let seatcard = document.createElement("div")
+
+    let Passenger = document.createElement("div")
+    let p1 = document.createElement("p")
+    p1.innerText = `Paseenger ${i+1}`
+    let p2 = document.createElement("p")
+    p2.innerText = `Seat ${seatarr[i]}`
+    Passenger.append(p1,p2)
+
+    let name = document.createElement("label")
+    name.innerText = "Name"
+    let namebox = document.createElement("input")
+    namebox.placeholder = "Enter Name"
+    namebox.className = "name_box"
+
+    let box = document.createElement("div")
+    let left = document.createElement("div")
+    let gender = document.createElement("label")
+    gender.innerText = "Gender"
+    let radio = document.createElement("div")
+    let check1 = document.createElement("input")
+    check1.type = "radio"
+    check1.name = "gender"
+    let male = document.createElement("label")
+    male.innerText = "Male"
+    let check2 = document.createElement("input")
+    check2.type = "radio"
+    check2.name = "gender"
+    let female = document.createElement("label")
+    female.innerText = "Female"
+    radio.append(check1,male,check2,female)
+    left.append(gender,radio)
+    let right = document.createElement("div")
+    let age = document.createElement("label")
+    age.innerText = "Age"
+    let agebox = document.createElement("input")
+    agebox.type = "number"
+    agebox.placeholder = "Enter Age"
+    agebox.className = "age_box"
+    right.append(age,agebox)
+    box.append(left,right)
+    seatcard.append(Passenger,name,namebox,box)
+    // contact
+
+    let contact = document.createElement("div")
+    contact.id = "contact_msg"
+    let logo = document.createElement("p")
+    logo.innerHTML = `<span class="material-symbols-outlined">contact_mail</span>`
+    let msg = document.createElement("p")
+    msg.innerText = "Contact Details"
+    contact.append(logo,msg)
+
+    two.append(seatcard)
+
+    
+   }
+   // contact
+
+   let contact = document.createElement("div")
+   contact.id = "contact_msg"
+
+   let pcont = document.createElement("div")
+
+   let logo = document.createElement("p")
+   logo.innerHTML = `<span class="material-symbols-outlined">contact_mail</span>`
+   let msg = document.createElement("p")
+   msg.innerText = "Contact Details"
+   pcont.append(logo,msg)
+
+   let pcontact = document.createElement("p")
+   pcontact.innerText = "Your ticket will be sent to these details"
+
+   let emailid = document.createElement("label")
+   emailid.innerText = "Email ID"
+   let emailinput = document.createElement("input")
+   emailinput.id = "passenger_email"
+   emailinput.type  = "email"
+   emailinput.placeholder = "Enter Email"
+   let phone = document.createElement("label")
+   phone.innerText = "Phone"
+   let phoneinput = document.createElement("input")
+   phoneinput.id = "passenger_phone"
+   phoneinput.type  = "phone"
+   phoneinput.placeholder = "Enter Phone"
+
+   contact.append(pcont,pcontact,emailid,emailinput,phone,phoneinput)
+
+
+
+   two.append(contact)
+
+
     let three = document.createElement("div")
     three.id = "side_three"
+
+    let term = document.createElement("p")
+    term.innerText = "By clicking on proceed, I agree that I have read and understood the TnCs and the Privacy Policy"
+    let proceed_box  = document.createElement("div")
+    let amount = document.createElement("p")
+    amount.innerText = `Total Amount :INR ${el.price*seatarr.length}`
+    let pbtn  =document.createElement("button")
+    pbtn.id = "proceed_btn"
+    pbtn.innerText = "PROCEES TO PAY"
+    proceed_box.append(amount,pbtn)
+    three.append(term,proceed_box)
+
 
     pay_side2.append(one, two, three)
 
@@ -403,6 +513,11 @@ function process_continue(el, seatarr) {
 
 
     document.querySelector("#payment").append(payment)
+    document.getElementById("payment").style.display = "flex"
+    document.getElementById("pay_side").style.opacity = "0.5"
+    
 
 }
-
+function closepopup(){
+    document.getElementById("payment").style.display = "none"
+}
