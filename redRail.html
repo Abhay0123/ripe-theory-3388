@@ -5,7 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>redRail</title>
-    <link rel="stylesheet" href="./css/redRail.css">
+    <style>
+        #nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    background-color: #d84e55;
+    color: rgb(243, 243, 243);
+    font-family: "Montserrat";
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 50px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+#nav > a{
+    margin-top: 9px;
+    color: white;
+    text-decoration: none;
+}
+#block1{
+    width: 100%;
+    height: 40rem;
+    margin: auto;
+    text-align: center;
+    background-color: #d84e55;
+    margin-top: 5rem;
+}
+#block1 > div{
+    /* border:1px solid white; */
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 25px;
+}
+#block2{
+    text-align: center;
+}
+#whybook{
+    width: 80%;
+    height: 14rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid transparent;            
+}
+#whybook > div{
+    width: 16rem;
+    border: 1px solid transparent;
+    font-size: 19px;
+                
+}
+#whybook > div > img{
+    width: 65px;
+    height: 65px;
+}
+#whybook > div > p{
+    margin-top: -15px;
+}
+#block3{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0px;
+    background-color: #f7f7f7;
+}
+#list_wrap{
+    font-size: 16px;
+    line-height: 20px;
+    float: left;
+    width: 40%;
+    padding-left: 150px;
+}
+#list_wrap > div{
+    margin-bottom: 12px;
+    padding: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid #3E3E52;
+    border-radius: 8px;
+}
+#imgs{
+    width: 40rem;
+}
+#block4{
+    background: #FFFFFF;
+    padding: 48px 10%;
+    color: #3E3E52;
+}
+#block5{
+    padding: 3em 7em;
+    display: flex;
+    background: #1a2230;
+    color: #fff;
+}
+.left-block{
+    width: 70%;
+    display: flex;
+}
+.right-block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-about{
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.footer-col-heading{
+    font-weight: 700;
+    color: #797979;
+}
+.footer-list{
+list-style: none;
+margin: 0;
+padding: 0;
+border: 0;
+}
+.footer-links{
+text-decoration: none; 
+color: #d7d7d7; 
+font-size: 20px; 
+line-height: 2;
+cursor: pointer;
+}
+
+    </style>
 </head>
 <body>
     <div id="nav">
@@ -202,4 +336,50 @@
     </div>
 </body>
 </html>
-<script src="./Script/redRail.js"></script>
+<script>
+    let faqClick = () => {
+    var ele = document.getElementById("block4");
+    ele && ele.scrollIntoView(true);
+    window.scrollBy(0, -100)
+}
+
+let myFunction = (id) => {
+    let wrap = document.getElementById("list_wrap");
+    let elem = wrap.getElementsByTagName("div");
+    for (let item of elem) {
+        if (item.id == id) {
+            item.style.background = "#3E3E52";
+            item.style.color = "#FFFFFF";
+            item.style.boxShadow = "0px 4px 4px rgba(0, 0, 0, 0.25)";
+            item.style.borderRadius = "8px";
+            let spanEle = item.getElementsByTagName('span')[0];
+            spanEle.style.color = "#38B87C";
+            spanEle.style.fontWeight = "700";
+            let img = document.getElementById("screens");
+
+            if (id == "1") {
+                img.src = "https://st.redbus.in/Images/redrail/mob2_cont.png";
+            } else if (id == "2") {
+                img.src = "https://st.redbus.in/Images/redrail/select_train.png";
+            } else if (id == "3") {
+                img.src = "https://st.redbus.in/Images/redrail/irctc_un.png";
+            } else if (id == "4") {
+                img.src = "https://st.redbus.in/Images/redrail/make_pay.png"
+            } else {
+                img.src = "https://st.redbus.in/Images/redrail/irctc_pwd.png"
+            }
+            } else {
+            if(item.id) {
+                item.style.background = "#FFFFFF";
+                item.style.color = "#3E3E52";
+                item.style.boxShadow = "none";
+                item.style.borderRadius = "8px";
+                let spanEle = item.getElementsByTagName('span')[0];
+                spanEle.style.color = "#3E3E52";
+                spanEle.style.fontWeight = "700";
+                item.style.border = "1px solid #7F7E8C";
+            }      
+        }
+    }
+}
+</script>
