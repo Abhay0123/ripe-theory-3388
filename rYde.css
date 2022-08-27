@@ -446,10 +446,11 @@
 @media screen and (min-width: 300px) and (max-width: 450px) {
   #navbar {
     width: 450px;
-    height: 100px;
+    height: 80px;
     top: 0px;
     position: sticky;
     display: inline-block;
+  
   }
   #navbar_left {
     width: 95%;
@@ -470,8 +471,8 @@
     font-size: large;
   }
   #select > p {
-    margin: 0 0 10px 90px;
-  }
+    margin: 0 0 10px 30px;
+    }
 
   #select > div {
     grid-template-columns: repeat(1, 1fr);
@@ -483,9 +484,11 @@
   #book {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 200px);
+   
   }
   #book_in_3_steps {
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 30px;
   }
   #mq_heading,
   #mq_more {
@@ -548,7 +551,12 @@
   }
   #more {
     display: grid;
+   
     grid-template-columns: repeat(1, 300px);
+  }
+  #more>div:last-child{
+    width: 250px;
+   
   }
   .heading_faq {
     margin-top: -20px;
@@ -569,6 +577,7 @@
   }
   #footer > div > div {
     margin-top: 5px;
+    margin-left: 35px;
   }
   #bottom_theory h1,
   #bottom_theory p {
@@ -596,16 +605,127 @@
     margin-left: 50px;
   }
 }
-@media screen and (min-width: 551px) and (max-width: 700px) {
-  #select > div {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 100px);
+@media screen and (min-width: 700px) and (max-width: 750px) {
+    #navbar {
+        width: 750px;
+        height: 100px;
+        top: 0px;
+        position: sticky;
+       
+      }
+      #navbar_left {
+        width: 55%;
+        
+        margin-top: 10px;
+        margin-left: 10px;
+        gap: 5px;
+      }
+      #navbar_left img {
+        width: 90%;
+      }
+      #navbar_right {
+        width: 30%;
+        margin: auto;
+      
+      
+        margin-top: 40px;
+       
+      }
+      #top {
+        width: 600px;
+        font-size:large;
+      margin-bottom: 30px;  
+    }
+      #select {
+        
+        width: 700px;
+      font-size:small;
+        height: 150px;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+      }
+      #select img{
+        width: 50%;
+      }
+      #select > div {
+       
+        gap: 10px;
+      }
+      #select > div > div {
+       
+       width: 230px; 
+        border-radius: 5px;
+      }
+      #more{
+        width: 700px;
+      }
+      #more iframe {
+        width: 350px;
+        border-radius: 0px;
+        margin-left: 20px;
+      }
+      #more> div:last-child{
+       width:350px;
+       overflow: scroll;
+       padding: 10px;
+       height: 256px;
+      
+      }
+    .faqs{
+        width: 650px;
+    }
+ #footer{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 20px;
+ }
+ .footer_f div{
+    margin-bottom: -15px;
+ }
+ #footer >div:last-child{
+   margin-top: -10px;
+ }
+ #bottom_theory{
+    width: 650px;
+    margin-left: 30px;
+ }
+ #offers{
+    width: 680px;
+    margin-left: 20px;
+ }
+ #partners{
+    margin-left: 10px;
+ }
+ #partners img{
+width: 125px;
+ }
+ #book{
+    margin-left:10px;
+    width: 700px;
+    
+ }
+ #reviews{
+    width: 700px;
+
+    margin-left: 20px;
+ }
+ #safety {
+    width: 650px;
+   margin-bottom: 20px;
   }
-  #partners {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  #guidelines {
+    width: 640px;
+   
+    margin-left: 30px;
   }
-  #book {
-    grid-template-columns: repeat(2, 1fr);
+  #book_in_3_steps {
+    margin-left: 30px;
+    width: 680px;
   }
-}
+  .heading,.heading_p,.heading_faq{
+    margin-left: 10px;
+  }
+
+ }
+
