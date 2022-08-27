@@ -26,3 +26,9 @@ select.addEventListener('click',function(){
         div.style.display='none';
      }
 });
+
+let bus=document.querySelector('#bus');
+bus.addEventListener('click',function(){
+    window.location.replace('cab.html')
+
+});
