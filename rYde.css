@@ -634,46 +634,49 @@
       #top {
         width: 600px;
         font-size:large;
-      margin-bottom: 30px;  
+      margin-bottom: 30px;
+      margin-left: 20px;  
     }
       #select {
         
-        width: 700px;
-      font-size:small;
+        width: 600px;
+        font-size:small;
         height: 150px;
         text-align: center;
         padding: 10px;
         margin: auto;
+        margin-left: 10px;
       }
       #select img{
-        width: 50%;
+        width: 48%;
       }
       #select > div {
        
-        gap: 10px;
+        gap: 8px;
       }
       #select > div > div {
        
-       width: 230px; 
+       width: 210px; 
         border-radius: 5px;
       }
       #more{
         width: 700px;
       }
       #more iframe {
-        width: 350px;
+        width: 330px;
         border-radius: 0px;
-        margin-left: 20px;
+        margin-left:-10px;
       }
       #more> div:last-child{
-       width:350px;
+       width:300px;
        overflow: scroll;
-       padding: 10px;
+       padding: 8px;
        height: 256px;
       
       }
     .faqs{
-        width: 650px;
+        width: 610px;
+        margin-left: 20px;
     }
  #footer{
   display: grid;
@@ -695,14 +698,16 @@
     margin-left: 20px;
  }
  #partners{
-    margin-left: 10px;
+    margin-left: 15px;
  }
  #partners img{
-width: 125px;
+width: 120px;
+margin-left: -5px;
  }
  #book{
     margin-left:10px;
-    width: 700px;
+    width: 600px;
+    gap: 5px;
     
  }
  #reviews{
@@ -711,17 +716,18 @@ width: 125px;
     margin-left: 20px;
  }
  #safety {
-    width: 650px;
+    width: 630px;
    margin-bottom: 20px;
+   margin-left: 10px;
   }
   #guidelines {
-    width: 640px;
+    width: 600px;
    
     margin-left: 30px;
   }
   #book_in_3_steps {
     margin-left: 30px;
-    width: 680px;
+    width: 630px;
   }
   .heading,.heading_p,.heading_faq{
     margin-left: 10px;
