@@ -1,537 +1,611 @@
-
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
+#navbar {
+  width: 100%;
+  height: 65px;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  position: sticky;
+}
+#navbar_left {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  margin-left: 200px;
+}
+#navbar a {
+  text-decoration: none;
+  color: white;
+}
+#navbar_right {
+  float: right;
+  margin-right: 250px;
+  color: white;
+
+  margin-top: -20px;
+  display: flex;
+  width: 20%;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+#navbar_right > div {
+  display: flex;
+}
+#top {
+  margin: auto;
+  text-align: center;
+  font-size: larger;
+  width: 36%;
+
+  color: rgb(87, 84, 84);
+  margin-top: 50px;
+}
+#select {
+  width: 70%;
+
+  height: 180px;
+  text-align: center;
+  padding: 30px;
+  margin: auto;
+}
+
+#select > div {
+  color: rgb(87, 84, 84);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#select > div > div {
+  border: 1px solid blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+
+  border-radius: 10px;
+}
+#select > div > div:last-child img {
+  width: 67%;
+}
+#select > div > div div {
+  display: inline;
+}
+#select p {
+  color: gray;
+}
+#select > div > div:hover {
+  border: 2px solid blue;
+}
+#offers {
+  width: 71%;
+  height: 140px;
+  margin: auto;
+  gap: 20px;
+
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.heading a {
+  text-decoration: none;
+}
+#offers > div {
+  width: 200px;
+  margin-right: 20px;
+
+  display: inline-block;
+
+  color: white;
+
+  height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
+#offers > div:first-child {
+  background: linear-gradient(
+    260.04deg,
+    rgb(183, 248, 219) 0%,
+    rgb(80, 167, 194) 100%
+  );
+}
+#offers > div:nth-child(2) {
+  background: linear-gradient(
+    247.67deg,
+    rgb(255, 220, 171) -7.22%,
+    rgb(206, 119, 0) 83.33%
+  );
+}
+#offers > div:nth-child(3) {
+  background: linear-gradient(
+    80.04deg,
+    rgb(77, 49, 176) 0%,
+    rgb(229, 179, 179) 100%
+  );
+}
+#offers > div:nth-child(4) {
+  background: linear-gradient(
+    258.38deg,
+    rgb(255, 134, 122) 2.88%,
+    rgb(255, 129, 119) 2.88%,
+    rgb(177, 42, 91) 103.25%
+  );
+}
+#offers > div:nth-child(5) {
+  background: linear-gradient(
+    71.04deg,
+    rgb(12, 57, 139) -6.92%,
+    rgb(90, 110, 157) 109.43%
+  );
+}
+#offers > div:nth-child(6) {
+  background: linear-gradient(
+    260.28deg,
+    rgb(239, 89, 90) 1.92%,
+    rgb(7, 48, 121) 101.82%
+  );
+}
+#partners {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+  gap: 20px;
+}
+#partners img {
+  width: 176px;
+}
+.heading,
+.heading_faq {
+  margin-left: 15%;
+  margin-top: 60px;
+
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.heading_faq {
+  font-size: 34px;
+}
+.heading_p {
+  display: flex;
+  gap: 5px;
+  margin-left: 15%;
+  margin-top: 40px;
+  margin-bottom: -40px;
+  font-size: 22px;
+}
+#book {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 70%;
+  margin: auto;
+  gap: 20px;
+  height: 240px;
+}
+#book > div {
+  padding: 10px;
+}
+#book h3 {
+  width: 100px;
+}
+#book p {
+  width: 140px;
+  color: gray;
+}
+
+#book > div:first-child {
+  background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group5.svg");
+}
+#book > div:nth-child(2) {
+  background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group5.svg");
+}
+#book > div:nth-child(3) {
+  background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group7.svg");
+}
+#book > div:nth-child(4) {
+  background-image: url("	https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group8.svg");
+}
+#reviews {
+  width: 71%;
+  margin: auto;
+
+  height: 230px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+}
+#reviews > div {
+  width: 300px;
+  height: 190px;
+  padding: 10px;
+  border: 0.1px solid gray;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.rev {
+  color: gray;
+  margin-bottom: 20px;
+}
+.rev_h3 {
+  margin-bottom: 20px;
+  margin-left: 55px;
+  margin-top: -20px;
+}
+.rev_h3 + p {
+  color: gray;
+}
+.rating {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 2px;
+  font-size: smaller;
+  width: 40px;
+  border-radius: 5px;
+  gap: 4px;
+  background-color: green;
+}
+.rating img {
+  width: 65%;
+  padding: 2px;
+}
+#safety {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  width: 70%;
+}
+#safety div {
+  display: flex;
+  color: rgb(102, 99, 99);
+}
+#guidelines {
+  width: 67%;
+  height: 80px;
+  padding: 20px;
+  line-height: 30px;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px solid green;
+  background-color: rgba(127, 255, 212, 0.726);
+}
+#guidelines > p:last-child {
+  background-color: green;
+  border-radius: 10px;
+  width: 110px;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  height: 15px;
+  padding: 1px;
+}
+#book_in_3_steps {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  gap: 20px;
+}
+#book_in_3_steps > div {
+  display: flex;
+  border: 0.5px solid magenta;
+  border-radius: 10px;
+  padding: 10px;
+}
+#more {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  gap: 20px;
+
+  font-size: large;
+  color: gray;
+}
+#more iframe {
+  border-radius: 10px;
+}
+#more > div:last-child p {
+  margin-bottom: 30px;
+}
+#faqs {
+  width: 70%;
+  margin: auto;
+}
+.faqs {
+  margin: auto;
+  width: 70%;
+}
+.faqs .content {
+  position: relative;
+}
+.faqs .content .q1 {
+  position: relative;
+  padding: 16px;
+  font-size: large;
+  margin-bottom: 16px;
+  border: 1px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.faqs .content .q1::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+.faqs .content .ans {
+  position: relative;
+
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+.faqs .content.active .q1 {
+  background-color: blue;
+
+  color: white;
+  font-size: larger;
+}
+.faqs .content.active .q1::before {
+  content: "-";
+}
+.faqs .content.active .ans {
+  height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: -16px;
+  border: 1px solid gray;
+  overflow: hidden;
+  display: flex;
+
+  align-items: center;
+}
+#table {
+  width: 70%;
+  margin: auto;
+  border: 1px solid black;
+}
+#table > div {
+  display: grid;
+  grid-template-rows: repeat(4, 35px);
+  grid-template-columns: repeat(5, 1fr);
+}
+#table > div div {
+  border: 0.1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bottom_theory {
+  width: 70%;
+  margin: auto;
+}
+#bottom_theory > h1 {
+  margin: 20px;
+  color: rgb(53, 49, 49);
+  margin-left: -14px;
+}
+#bottom_theory > p {
+  margin-bottom: 20px;
+}
+
+#bottom_theory > p {
+  color: rgb(82, 79, 79);
+}
+#pricing,
+#pricing + p,
+#pricing + p + p {
+  margin-bottom: 10px;
+  margin-left: 15%;
+  width: 70%;
+}
+#footer {
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  background-color: rgb(26, 25, 25);
+  color: gray;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+#footer > div > div a {
+  color: white;
+
+  text-decoration: none;
+}
+#footer > div > div {
+  margin-top: 20px;
+}
+#footer > div:last-child {
+  margin-top: 100px;
+  display: flex;
+  gap: 4px;
+}
+#footer > div a:hover {
+  color: brown;
+}
+@media screen and (min-width: 300px) and (max-width: 450px) {
   #navbar {
-    width: 100%;
-    height: 65px;
-    background-color: brown;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
+    width: 450px;
+    height: 100px;
+    top: 0px;
     position: sticky;
+    display: inline-block;
   }
   #navbar_left {
-    width: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    margin-left: 200px;
+    width: 95%;
+    font-size: large;
+    margin-top: 10px;
+    margin-left: 10px;
+    gap: 5px;
   }
-  #navbar a {
-    text-decoration: none;
-    color: white;
+  #navbar_left img {
+    width: 70%;
   }
   #navbar_right {
-    float: right;
-    margin-right: 250px;
-    color: white;
-  
-    margin-top: -20px;
-    display: flex;
-    width: 20%;
-  
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  #navbar_right > div {
-    display: flex;
-  }
-  #top {
-
+    width: 50%;
     margin: auto;
-    text-align: center;
-    font-size: larger;
-    width: 36%;
 
-    color: rgb(87, 84, 84);
-    margin-top: 50px;
+    margin-right: 100px;
+    margin-top: 5px;
+    font-size: large;
   }
-  #select {
-    width: 70%;
-
-    height: 180px;
-    text-align: center;
-    padding: 30px;
-    margin: auto;
+  #select > p {
+    margin: 0 0 10px 90px;
   }
 
   #select > div {
-    color: rgb(87, 84, 84);
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-
-  }
-  #select > div > div {
-    border: 1px solid blue;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 330px;
-
-  
-    border-radius: 10px;
-  }
-  #select > div > div:last-child img {
-    width: 67%;
-  }
-  #select > div > div div {
-    display: inline;
-  }
-  #select p {
-    color: gray;
-  }
-  #select > div > div:hover {
-    border: 2px solid blue;
-  }
-  #offers {
-    width: 71%;
-    height: 140px;
-    margin: auto;
-    gap: 20px;
-  
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
-  .heading a {
-    text-decoration: none;
-  }
-  #offers > div {
-    width: 200px;
-    margin-right: 20px;
-  
-    display: inline-block;
-  
-    color: white;
-  
-    height: 100px;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  #offers > div:first-child {
-    background: linear-gradient(
-      260.04deg,
-      rgb(183, 248, 219) 0%,
-      rgb(80, 167, 194) 100%
-    );
-  }
-  #offers > div:nth-child(2) {
-    background: linear-gradient(
-      247.67deg,
-      rgb(255, 220, 171) -7.22%,
-      rgb(206, 119, 0) 83.33%
-    );
-  }
-  #offers > div:nth-child(3) {
-    background: linear-gradient(
-      80.04deg,
-      rgb(77, 49, 176) 0%,
-      rgb(229, 179, 179) 100%
-    );
-  }
-  #offers > div:nth-child(4) {
-    background: linear-gradient(
-      258.38deg,
-      rgb(255, 134, 122) 2.88%,
-      rgb(255, 129, 119) 2.88%,
-      rgb(177, 42, 91) 103.25%
-    );
-  }
-  #offers > div:nth-child(5) {
-    background: linear-gradient(
-      71.04deg,
-      rgb(12, 57, 139) -6.92%,
-      rgb(90, 110, 157) 109.43%
-    );
-  }
-  #offers > div:nth-child(6) {
-    background: linear-gradient(
-      260.28deg,
-      rgb(239, 89, 90) 1.92%,
-      rgb(7, 48, 121) 101.82%
-    );
+    grid-template-columns: repeat(1, 1fr);
   }
   #partners {
-    width: 70%;
-    display: flex;
-    margin: auto;
-    margin-top: 50px;
-    gap: 20px;
-  }
-  #partners img {
-    width: 176px;
-  }
-  .heading,
-  .heading_faq {
-    margin-left: 15%;
-    margin-top: 60px;
-  
-    margin-bottom: 20px;
-    font-size: 22px;
-  }
-  .heading_faq {
-    font-size: 34px;
-  }
-  .heading_p {
-
-
-    display: flex;
-    gap: 5px;
-    margin-left: 15%;
-    margin-top: 40px;
-    margin-bottom: -40px;
-    font-size: 22px;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   #book {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 70%;
-    margin: auto;
-    gap: 20px;
-    height: 240px;
-  }
-  #book > div {
-    padding: 10px;
-  }
-  #book h3 {
-    width: 100px;
-  }
-  #book p {
-    width: 140px;
-    color: gray;
-  }
-  
-  #book > div:first-child {
-    background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group5.svg");
-  }
-  #book > div:nth-child(2) {
-    background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group5.svg");
-  }
-  #book > div:nth-child(3) {
-    background-image: url("https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group7.svg");
-  }
-  #book > div:nth-child(4) {
-    background-image: url("	https://www.redbus.in/bushire/static/mwebv2/ryde/webhome/Group8.svg");
-  }
-  #reviews {
-    width: 71%;
-    margin: auto;
-  
-    height: 230px;
-    overflow-x: scroll;
-    white-space: nowrap;
-    display: flex;
-  }
-  #reviews > div {
-    width: 300px;
-    height: 190px;
-    padding: 10px;
-    border: 0.1px solid gray;
-    border-radius: 10px;
-    margin-right: 20px;
-  }
-  
-  .rev {
-    color: gray;
-    margin-bottom: 20px;
-  }
-  .rev_h3 {
-    margin-bottom: 20px;
-    margin-left: 55px;
-    margin-top: -20px;
-  }
-  .rev_h3 + p {
-    color: gray;
-  }
-  .rating {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 2px;
-    font-size: smaller;
-    width: 40px;
-    border-radius: 5px;
-    gap: 4px;
-    background-color: green;
-  }
-  .rating img {
-    width: 65%;
-    padding: 2px;
-  }
-  #safety {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    margin: auto;
-    width: 70%;
-  }
-  #safety div {
-    display: flex;
-    color: rgb(102, 99, 99);
-  }
-  #guidelines {
-    width: 67%;
-    height: 80px;
-    padding: 20px;
-    line-height: 30px;
-    border-radius: 10px;
-    margin: auto;
-    border: 1px solid green;
-    background-color: rgba(127, 255, 212, 0.726);
-  }
-  #guidelines > p:last-child {
-    background-color: green;
-    border-radius: 10px;
-    width: 110px;
-  
-
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: smaller;
-    height: 15px;
-    padding: 1px;
-
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 200px);
   }
   #book_in_3_steps {
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  #book_in_3_steps > div {
-
-    display: flex;
-    border: 0.5px solid magenta;
-    border-radius: 10px;
-    padding: 10px;
-
-  }
-  #more {
-
-    display: flex;
-    margin: auto;
-    width: 70%;
-    gap: 20px;
-
-    font-size: large;
-    color: gray;
-  }
-  #more iframe {
-    border-radius: 10px;
-  }
-  #more > div:last-child p {
-    margin-bottom: 30px;
-  }
-  #faqs {
-    width: 70%;
-    margin: auto;
-  }
-  .faqs {
-    margin: auto;
-    width: 70%;
-  }
-  .faqs .content {
-    position: relative;
-  }
-  .faqs .content .q1 {
-    position: relative;
-    padding: 16px;
-    font-size: large;
-    margin-bottom: 16px;
-    border: 1px solid black;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .faqs .content .q1::before {
-    content: "+";
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 1.5em;
-  }
-  .faqs .content .ans {
-    position: relative;
-  
-    height: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    overflow-y: auto;
-  }
-  .faqs .content.active .q1 {
-    background-color: blue;
-  
-    color: white;
-    font-size: larger;
-  }
-  .faqs .content.active .q1::before {
-    content: "-";
-  }
-  .faqs .content.active .ans {
-    height: 30px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin-top: -16px;
-    border: 1px solid gray;
-    overflow: hidden;
-    display: flex;
-  
-    align-items: center;
-  }
-  #table {
-    width: 70%;
-    margin: auto;
-    border: 1px solid black;
-  }
-  #table > div {
-    display: grid;
-    grid-template-rows: repeat(4, 35px);
-    grid-template-columns: repeat(5, 1fr);
-  }
-  #table > div div {
-    border: 0.1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #bottom_theory {
-    width: 70%;
-    margin: auto;
-  }
-  #bottom_theory > h1 {
-    margin: 20px;
-    color: rgb(53, 49, 49);
-    margin-left: -14px;
-  }
-  #bottom_theory > p {
-    margin-bottom: 20px;
-  }
-  
-  #bottom_theory > p {
-    color: rgb(82, 79, 79);
-  }
-  #pricing,
-  #pricing + p,
-  #pricing + p + p {
-    margin-bottom: 10px;
-    margin-left: 15%;
-    width: 70%;
-  }
-  #footer {
-    width: 100%;
-    height: 250px;
-    margin-top: 30px;
-    background-color: rgb(26, 25, 25);
-    color: gray;
-    display: flex;
-    justify-content: space-evenly;
-    text-decoration: none;
-  }
-  
-  #footer > div > div a {
-    color: white;
-  
-    text-decoration: none;
-  }
-  #footer > div > div {
+  #mq_heading,
+  #mq_more {
     margin-top: 20px;
   }
-  #footer > div:last-child {
-    margin-top: 100px;
-    display: flex;
-    gap: 4px;
+  .heading_p {
+    width: 380px;
   }
-  #footer > div a:hover {
-    color: brown;
+  #top {
+    width: 400px;
+    margin-left: 25px;
+    font-size: medium;
   }
-  @media  screen and (min-width:350px) and (max-width:550px){
-   
-
-    #select > div {
-    
-        
-        grid-template-columns: repeat(1,1fr);
-       
-    }
-    #partners{
-        display: grid;
-       grid-template-columns: repeat(2,1fr); 
-    }
-    #book{
-      
-        grid-template-columns: repeat(2,1fr);
-       grid-template-rows: repeat(4,200px);
-        
-    }
-    #book_in_3_steps {
-        grid-template-columns: repeat(2,1fr);
-     
-    }
-    #top {
-        width: 400px;
-       font-size: medium;
-     
-    }
-    #offers{
-        margin-top: 220px;
-    }
-    #reviews{
-        margin-top: 150px;
-    }
-    .heading {
-        margin-top:300px;
-    }
-    #offers{
+  #offers {
+    margin-top: 220px;
+  }
+  #reviews {
+    margin-top: 150px;
+  }
+  .heading {
+    margin-top: 300px;
+  }
+  #offers {
     margin-top: -10px;
-    }
-    #hmq{
-      margin-top:20px;
-    }
-    #cmq{
-        margin-top: 220px;
-        margin-bottom: -130px;
-    }
-    .heading_s{
-        margin-bottom: -290px;
-    }
-    #safety {
-        
-        grid-template-columns: repeat(2,1fr);
-        gap: 20px;
-       
-    }
-   #guidelines p{
-   line-height: 22px;
-   } 
-}
-    @media  screen and (min-width:551px) and (max-width:700px){
-       
-    
-        #select > div {
-        
-         
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(2,100px);
-        }
-        #partners{
-            display: grid;
-           grid-template-columns: repeat(3,1fr); 
-        }
-        #book{
-           
-            grid-template-columns: repeat(2,1fr);
-           
-        }
-        }
+  }
+  #hmq {
+    margin-top: 20px;
+  }
+  #cmq {
+    margin-top: 220px;
+    margin-bottom: -130px;
+  }
+  .heading_s {
+    margin-bottom: -290px;
+    font-size: medium;
+  }
+  #sfty_p {
+    margin-top: 40px;
+  }
+  #safety {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #guidelines {
+    width: 360px;
+    margin-left: 20px;
+  }
+  #guidelines p {
+    line-height: 20px;
+  }
+  #guidelines > div {
+    width: 400px;
+  }
+  #more iframe {
+    width: 400px;
+    border-radius: 0px;
+    margin-left: -20px;
+  }
+  #more {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+  }
+  .heading_faq {
+    margin-top: -20px;
+  }
+  #footer {
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    font-size: small;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #footer > div:last-child {
+    display: inline-block;
+    width: 80px;
+    margin-top: 10px;
+    gap: 2px;
+  }
+  #footer > div > div {
+    margin-top: 5px;
+  }
+  #bottom_theory h1,
+  #bottom_theory p {
+    width: 380px;
+    font-size: medium;
+  }
+  #table {
+    width: 400px;
+    margin-left: 20px;
+  }
+  li {
+    width: 360px;
+  }
+  .pricing_p {
+    width: 400px;
+    margin-bottom: 20px;
+    font-size: larger;
+  }
+  .pricing_p h1 {
+    font-size: large;
+  }
 
+  .faqs {
+    width: 360px;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 700px) {
+  #select > div {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+  }
+  #partners {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #book {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
