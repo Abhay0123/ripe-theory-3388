@@ -124,6 +124,80 @@
     font-size: 21px;
     margin: auto;
 }
+
+#part10{
+    width: 90%;
+    display: flex;
+    /* border: 1px solid; */
+    height: 25rem;
+    margin: auto;
+    justify-content: space-evenly;
+    background-color: #ededed;
+}
+#part10 > div{
+    width: 21%;
+    /* border: 1px solid; */
+    height: 17rem;
+    margin-top: 62px;
+    background-color: white;
+}
+#part10 > div:nth-child(1){
+    width: 18%;
+    background-color: #ededed;
+    font-size: larger;
+    padding-left: 25px;
+}
+.tags{
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+#block4{
+    background: #FFFFFF;
+    padding: 48px 10%;
+    color: #3E3E52;
+}
+#block5{
+    padding: 3em 7em;
+    display: flex;
+    background: #1a2230;
+    color: #fff;
+}
+.left-block{
+    width: 70%;
+    display: flex;
+}
+.right-block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.footer-about{
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.footer-col-heading{
+    font-weight: 700;
+    color: #797979;
+}
+.footer-list{
+list-style: none;
+margin: 0;
+padding: 0;
+border: 0;
+}
+.footer-links{
+text-decoration: none; 
+color: #d7d7d7; 
+font-size: 20px; 
+line-height: 2;
+cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -301,19 +375,200 @@
     <div id="part9">
         <h2>Why redBus rPool?</h2>
         <div style="display:flex;">
-            <div style="width:50%">
+            <div style="width:80%; margin: auto;">
                 <div style="display:flex;">
                     <div>
-                        <img src="" alt="">
+                        <div>
+                            <h4>Travel Smart with Insurance</h4>
+                            <p>We wish you a safe trip every time. That’s why when you ride on rPool, we cover every trip with insurance</p>
+                        </div>
+                        <div>
+                            <h4>Save More on every ride</h4>
+                            <p>With rPool you get the best value for rides with opportunities to earn bonus rPool points through great offers</p>
+                        </div>
+                        <div>
+                            <h4>No Transaction Charges</h4>
+                            <p>We believe in making every ride even more pleasant, therefore enjoy your pool without any transaction charges.</p>
+                        </div>
                     </div>
                     <div>
-                        <h4>Travel Smart with Insurance</h4>
-                        <p>We wish you a safe trip every time. That’s why when you ride on rPool, we cover every trip with insurance</p>
+                        <div>
+                            <h4>Privacy Protectede</h4>
+                            <p>Your details are kept safe with us. When you call fellow travellers, the call is routed through the app with phone masking enabled.</p>
+                        </div>
+                        <div>
+                            <h4>Networking on the go</h4>
+                            <p>Create new friendships with your fellow bikepoolers or carpoolers. Connect with various professionals and enjoy networking while on your rides.</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
             <div></div>
+        </div>
+    </div>
+    <div style="width: 100%; background-color: #ededed;">
+        <div id="part10">
+            <div>
+                <h1>Introducing rPool Points</h1>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h3>RECHARGE</h3>
+                <p class="tags">Add an amount with a choice of netbanking, credit/debit cards and wallets.</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h3>AUTO DEBIT/CREDIT</h3>
+                <p class="tags">Set your points for auto debit after each ride.</p>
+            </div>
+            <div>
+                <img src="" alt="">
+                <h3>REDEEM</h3>
+                <p class="tags">Your points can be redeemed against TMW Card & Amazon Gift Card as well.</p>
+            </div>
+        </div>
+    </div>
+    <div id="block4">
+        <div style="padding-bottom: 24px;font-weight: bold; font-size: 28px; line-height: 34px;">FAQ</div>
+        <div style="font-size: 20px;line-height: 24px;">
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How can I complete an online train ticket booking with redRail?</b></div>
+                <div>Booking a train ticket online can be completed with ease in just a few simple steps. If you’re
+                    on the app, first click on the “redRail” icon that’s displayed on your screen. Enter the source
+                    and destination locations along with the date of travel. Once done, a list of trains operating
+                    on your route will be displayed. Select the train and class of your choice, select the boarding
+                    station, enter your registered IRCTC id, enter the details of the passenger and complete the
+                    payment. After the payment, enter the IRCTC password and that's it - your tickets will be
+                    booked. You will receive an email, a WhatsApp message and a text message containing details of
+                    your booking.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Do I need to make an account on the redBus platform to complete my IRCTC train ticket
+                        booking online?</b></div>
+                <div>Yes, and this has its advantages. This would help expedite the booking process when you have to
+                    enter details about the passenger and while completing the payment process.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How is redRail connected to redBus?</b></div>
+                <div>redRail is a new product that’s offered by redBus. Utilising its massive successful experience
+                    in the bus industry, redBus aims to attain the same success in the train travel domain as well.
+                    A customer can view, book, and complete their payment of train tickets on the redBus app by
+                    clicking on the “redRail” option that’s provided.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How do I cancel a train ticket booked through redRail?</b></div>
+                <div>Cancelling an online train ticket booking through redRail can be done as easily as booking a
+                    train ticket. When you view the details of your train ticket booking on the app under My
+                    Bookings, you are presented with the option to cancel the ticket. You can either select some of
+                    the passengers or all the passengers to cancel and then proceed. A small cancellation fee might
+                    be charged based on the timing of your cancellation request as per IRCTC cancellation and refund
+                    policy.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How do I pay for my online train ticket booking that is made through redRail?</b></div>
+                <div>You can complete your online train ticket booking by using any of the variety of payment
+                    options that are available at your disposal. Customers can use any amount that’s remaining in
+                    their redBus wallet, credit or debit cards, Wallets such as Amazon Pay or through UPI payment
+                    gateways such as GooglePay, PhonePe, etc. Payments made online on redRail are safe & secure and
+                    eliminate the need to wait in a queue.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Are there any cancellation charges levied when a train ticket is cancelled?</b></div>
+                <div>Yes, there are. Depending on when the cancellation was initiated, an amount might get deducted
+                    as per the cancellation and refund rules of IRCTC and Indian Railways.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>How many people can I book on a single train ticket booking?</b></div>
+                <div>Customers can book a maximum of 6 passengers in a single train ticket booking that’s made
+                    through redRail. However, in the case of Tatkal ticket, customers can book a maximum of 4
+                    passengers in a single ticket booking through redRail.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>What are some of the advantages of booking a train ticket with redRail?</b></div>
+                <div>One of the key advantages of making an online train ticket booking with redRail is convenience.
+                    In the current environment where safety and social distancing is a priority, customers can view,
+                    select, and make their payments online from the comfort of their homes. redRail displays vital
+                    information about their train journey.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Do I get the option to select my seat or berth on the train?</b></div>
+                <div>Yes, you can. While entering the details of the passenger, you can select the berth of your
+                    choice. If there are multiple seats booked through one booking, you can select a berth for each
+                    passenger individually. You also get the option to make a reservation preference such as book
+                    only if all berths/seats are allotted in the same coach, book only if one or two lower berths
+                    are allotted, and more.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Should I book my train ticket in advance?</b></div>
+                <div>It is advisable to complete your online train ticket booking through redRail in advance as this
+                    would ensure that you have more choices when it comes to the trains operating on your route as
+                    well as ensures that you have more options related to selecting the berth of your choice.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Where can I view the train ticket that I have booked through redRail?</b></div>
+                <div>After you have successfully booked a train ticket through redRail, you will receive an email, a
+                    WhatsApp message and a text message containing the details about your booking. You can also view
+                    your bookings under the “My Bookings” section of the redBus app.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Can I book a train ticket under the Tatkal quota through redRail?</b></div>
+                <div>Yes, you can book Tatkal quota train tickets through redRail. With the convenience of viewing
+                    updated trains and their berth availability, it is advisable to complete your online train
+                    ticket booking at the earliest through redRail.</div>
+            </div><br>
+
+            <div style="padding-bottom: 1.5rem;">
+                <div><b>Are there any offers that can be availed when making an online train ticket booking on
+                        redRail?</b></div>
+                <div>Yes. redRail offers are provided regularly and the offer details can be found on the redRail
+                    homepage or the app. Enter the offer code at the time of making your payment and avail a
+                    discount on your train tickets online.</div>
+            </div><br>
+
+            <div>
+                <div><b>Do I need to carry any documents with me while I board my train?</b></div>
+                <div>You do not require a photo ID when you book your train ticket through redRail, but, you will
+                    need to carry an ID when you board the train. IDs such as PAN card, Voter ID, Driving Licence,
+                    Aadhar card or any other photo ID that has a serial number issued by the Central/State
+                    Government.</div>
+            </div><br>
+        </div>
+    </div>
+    <div id="block5">
+        <div class="left-block">
+            <div class="footer-col">
+                <p class="footer-col-heading">About Redbus</p>
+                <ul class="footer-list">
+                    <li><a class="footer-links" href="https://www.redbus.in/info/aboutus">About us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-heading">About Redbus</p>
+                <ul class="footer-list">
+                    <li><a class="footer-links" href="https://www.redbus.in/info/termscondition">T&ampC</a></li>
+                    <li><a class="footer-links" href="https://www.redbus.in/info/privacypolicy">Privacy Policy</a></li>
+                    <li><div class="footer-links" onclick="faqClick()">FAQ</div></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-block">
+            <div style="display: inline;"><img src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"></div>
+            <p class="footer-about">redBus is the world's largest online bus ticket booking service trusted by over 8
+                million happy customers globally. redBus offers bus ticket booking through its website,iOS and
+                Android mobile apps for all major routes.</p>
+            <p class="footer-about">Ⓒ 2021 ibibogroup All rights reserved</p>
         </div>
     </div>
 </body>
