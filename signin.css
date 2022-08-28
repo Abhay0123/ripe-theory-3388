@@ -63,7 +63,7 @@
 
   /* opt css*/
 
-  .windowOTP{
+  /* .windowOTP{
     background-color: #454A4D;
     backface-visibility: 0.5;
     width: 100%;
@@ -75,7 +75,7 @@
     align-items: center;
     text-align: center;
     transition: 0.10s;
-  }
+  } */
   .container-outer-OTP{
     background-color:rgb(238, 230, 230);
     border: 5px solid #303335;

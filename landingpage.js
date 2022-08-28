@@ -7,9 +7,15 @@ function searchBtn() {
    let onwardDate = document.querySelector("#input-label-onward-date").value;
     
 
-    localStorage.setItem("from",from);
-    localStorage.setItem("to",to);
-    localStorage.setItem("onwardDate",onwardDate);
+    // localStorage.setItem("from",from);
+    // localStorage.setItem("to",to);
+    // localStorage.setItem("onwardDate",onwardDate);
+    let obj = {
+      from: from,
+      to:to,
+      onwardDate:onwardDate,
+    };
+    localStorage.setItem("travelData:",JSON.stringify(obj));
    
 }
 
@@ -31,3 +37,8 @@ function animate() {
 }
 
 window.addEventListener("scroll", animate);
+
+
+function myfun(){
+  window.location.href="signin.html";
+}
