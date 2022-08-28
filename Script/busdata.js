@@ -366,7 +366,6 @@ function pickpoint(el) {
     document.getElementById("time").innerText = el.Depature
 }
 function process_continue(el, seatarr) {
-    console.log(seatarr)
     let payment = document.createElement("div")
     payment.id = "payment_page"
     
@@ -411,12 +410,14 @@ function process_continue(el, seatarr) {
     name.innerText = "Name"
     let namebox = document.createElement("input")
     namebox.placeholder = "Enter Name"
-    namebox.className = "name_box"
+    namebox.setAttribute = "required"
+    namebox.id = `name_box${i}`
 
     let box = document.createElement("div")
     let left = document.createElement("div")
     let gender = document.createElement("label")
     gender.innerText = "Gender"
+    
     let radio = document.createElement("div")
     let check1 = document.createElement("input")
     check1.type = "radio"
@@ -436,7 +437,7 @@ function process_continue(el, seatarr) {
     let agebox = document.createElement("input")
     agebox.type = "number"
     agebox.placeholder = "Enter Age"
-    agebox.className = "age_box"
+    agebox.id = `age_box${i}`
     right.append(age,agebox)
     box.append(left,right)
     seatcard.append(Passenger,name,namebox,box)
@@ -474,12 +475,14 @@ function process_continue(el, seatarr) {
    emailid.innerText = "Email ID"
    let emailinput = document.createElement("input")
    emailinput.id = "passenger_email"
+   emailinput.setAttribute = "required"
    emailinput.type  = "email"
    emailinput.placeholder = "Enter Email"
    let phone = document.createElement("label")
    phone.innerText = "Phone"
    let phoneinput = document.createElement("input")
    phoneinput.id = "passenger_phone"
+   phoneinput.setAttribute = "required"
    phoneinput.type  = "phone"
    phoneinput.placeholder = "Enter Phone"
 
@@ -501,6 +504,9 @@ function process_continue(el, seatarr) {
     let pbtn  =document.createElement("button")
     pbtn.id = "proceed_btn"
     pbtn.innerText = "PROCEES TO PAY"
+    pbtn.onclick = function(){
+        getadata(seatarr,el)
+    }
     proceed_box.append(amount,pbtn)
     three.append(term,proceed_box)
 
@@ -520,4 +526,43 @@ function process_continue(el, seatarr) {
 }
 function closepopup(){
     document.getElementById("payment").style.display = "none"
+}
+
+function getadata(seatarr,el){
+    let ticket_arr = []
+    
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min)
+    }
+    for(let i=0;i<seatarr.length;i++){
+        let tt = getRandomInt(721785,99853562)
+        let ticketobj = {
+            Passenger_name : document.getElementById(`name_box${i}`).value,
+            Passenger_age : document.getElementById(`age_box${i}`).value,
+            bus_name : el.busname,
+            bustype : el.bustype,
+            Depature : el.Depature,
+            arrival : el.arrival,
+            date : "date",
+            pick : el.pickup,
+            drop : el.drop,
+            price : el.price,
+            ticke_number : `REDG${tt}HT`
+        }
+        ticket_arr.push(ticketobj)
+    }
+    localStorage.setItem("ticket_data",JSON.stringify(ticket_arr))
+    let user_arr = []
+    let user_obj = {
+        email : document.getElementById("passenger_email").value,
+        phone : document.getElementById("passenger_phone").value,
+        seats : seatarr,
+        price : el.price*seatarr.length
+    }
+    user_arr.push(user_obj)
+
+    localStorage.setItem("user_data",JSON.stringify(user_arr))
+    window.location.href = "./payment.html"
 }
