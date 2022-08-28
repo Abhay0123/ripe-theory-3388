@@ -14,6 +14,7 @@ function navbar() {
    </select>
   </div>
    <div> <p><img src="https://www.redbus.in/bushire/static/mwebv2/header/ic-user-not-logged-in.svg" alt="">
+      
       <img src="https://www.redbus.in/bushire/static/webv2/home/2%20(6).svg" alt="">   </p></div>
       
     

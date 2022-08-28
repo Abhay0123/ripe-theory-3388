@@ -9,6 +9,7 @@ function OTPagain() {
         alert("Your OTP is "+ OTP )
         console.log(OTP)
         localStorage.setItem("OTP", JSON.stringify(OTP))
+        localStorage.setItem("num", JSON.stringify(num))
     },2000)
 }
 
@@ -38,7 +39,7 @@ document.getElementById("ButtonOTPvarification").addEventListener("click" ,funct
     if(GetOTP == GetInput){
         alert("Login Successfully")
         document.getElementById("invalidOTP").style.display = "none";
-        location.href = "./Mohit Codes/akash code/homePage.html";
+        location.href = "./index.html";
     }
     else{
         let invalidOTP = document.getElementById("invalidOTP");
