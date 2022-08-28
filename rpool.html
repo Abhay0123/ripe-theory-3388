@@ -297,8 +297,8 @@ button:hover{
                 Outstation services currently live across India</p>
             </div>
             <div style="width: 15%; padding-top: 50px; text-align: center;">
-                <img src="https://www.redbus.in/r-pool/images/googleplay.svg" alt="">
-                <img src="https://www.redbus.in/r-pool/images/ic_appstore.svg" alt="">
+                <img onclick="playstore()" src="https://www.redbus.in/r-pool/images/googleplay.svg" alt="">
+                <img onclick="appstore()" src="https://www.redbus.in/r-pool/images/ic_appstore.svg" alt="">
             </div>
         </div>
     </div>
@@ -859,5 +859,15 @@ let pay = () => {
     document.getElementById("offer").innerText = "Ride worry-free with the auto-debit points payment";
     fonts();
 }
+
+let playstore = () => {
+    window.location.href = "https://play.google.com/store/apps/details?id=in.redbus.android.rpool";    
+}
+
+let appstore = () => {
+    window.location.href = "https://apps.apple.com/in/app/rpool/id1548438985";    
+}
+
+
 
 </script>
