@@ -683,7 +683,7 @@ const busdata = [
       book.style.fontStyle = "italic";
       book.style.cursor = "pointer";
       book.addEventListener("click", function () {
-        window.location.replace("busdata.html");
+        window.location.href="./busdata.html";
       });
   
       let price = document.createElement("h3");
