@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        #nav {
+            width: 100%;
+            height: 70px;
+        }
+
+        #red {
+            width: 100%;
+            height: 70px;
+            background-color: brown;
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        #left {
+            display: grid;
+            padding: 10px;
+            row-gap: 20px;
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        #left img {
+            width: 5%;
+        }
+
+        #offer1>input {
+            padding: 10px;
+            width: 100%;
+            font-size: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: none;
+
+        }
+
+        #safe_pay {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+
+        }
+
+        #safe_pay>div {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        #safe_pay>div img {
+            width: 30%;
+        }
+
+        h4 {
+            color: grey;
+            margin-bottom: 20px;
+        }
+
+        #upi>div {
+            display: flex;
+            padding: 20px;
+            border: 1px solid grey;
+            column-gap: 10px;
+        }
+
+        #upi>div img {
+            width: 10%;
+        }
+
+        #cards>div {
+            display: flex;
+            padding: 20px;
+            border: 1px solid grey;
+            column-gap: 10px;
+        }
+
+        #right {
+            display: grid;
+            padding: 10px;
+            width: 90%;
+            margin: 0 auto;
+            row-gap: 30px;
+            font-size: 12px;
+        }
+
+        #details {
+            height: fit-content;
+            width: 80%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 10px;
+            display: grid;
+            font-size: 13px;
+            row-gap: 10px;
+            
+        }
+        #details>div{
+            border-bottom: 1px solid grey;
+            
+        }
+        #details>div>div{
+            display: grid;
+            row-gap: 5px;
+        }
+        
+        #four{
+            display: flex;
+            color: green;
+            font-weight: bold;
+        }
+        #one>:first-child{
+            color: brown;
+            font-weight: bold;
+        }
+        #two>div>:last-child{
+            font-weight: bold;
+        }
+        #three>div>:nth-child(2){
+            font-weight: bold;
+        }
+        
+
+        #brands {
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        #brands img {
+            width: 22%;
+
+        }
+        #one,#two,#three,#breakup{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        #breakup {
+            height: 25vh;
+            width: 80%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 10px;
+            font-size: 13px;
+        }
+        #breakup>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #breakup>:nth-child(1){
+            color: brown;
+        }
+        #breakup>:nth-child(2){
+           font-weight: bold;
+        }
+        #breakup>:nth-child(3)>:last-child{
+           color: red;
+        }
+        #breakup>:nth-child(4){
+            background-color: greenyellow;
+            padding: 10px;
+            font-weight: bold;
+        }
+        #id_box{
+
+            display: none;
+        }
+        #paid1{
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            border: none;
+            background-color: blanchedalmond;
+        }
+        #upi>:nth-child(4){
+            padding: 0;
+            height: 70px;
+        }
+        #paid2{
+            width: 100%;
+            height: 50px;
+            background-color: brown;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+
+    </div>
+    <div id="red">
+
+    </div>
+    <div id="main">
+        <div id="left">
+            <div id="offer1">
+                <input type="text" id="offer" placeholder="Enter Offer Code" >
+            </div>
+            <div id="safe_pay">
+                <div>
+                    <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/safe-payments.svg" alt="">
+                    <p> Safe and
+                        secure online payments</p>
+
+                </div>
+                <div>
+                    <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/transactions.svg" alt="">
+                    <p> 60+
+                        million transactions</p>
+                </div>
+
+                <div>
+                    <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/trust.svg" alt="">
+
+                    <p> 10+ years of
+                        Trust</p>
+                </div>
+            </div>
+            <h1>Choose Payment Method</h1>
+            <div id="upi">
+                <h4>UPI PAYMENT USING PHONEPE / GPAY / AMAZON PAY ETC..</h4>
+                <div id="qr" onclick="add_div2()">
+                    <input type="radio" name="upi">
+                    <p>Pay through QR code</p>
+                    <img src="https://st.redbus.in/paas/images/v2/GPayNewLogo.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/web/v2/upi/phonepe.svg" alt="">
+                    <img src="https://s3.rdbuz.com/Images/home/paytm.svg" alt="">
+                </div>
+                
+                <div id="upi_id" onclick="add_div()">
+                    <input type="radio" name="upi">
+                    <p>Pay through UPI ID</p>
+                    <img src="https://st.redbus.in/paas/images/v2/GPayNewLogo.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/web/v2/upi/phonepe.svg" alt="">
+                    <img src="https://s3.rdbuz.com/Images/home/paytm.svg" alt="">
+                </div>
+            </div>
+
+
+            <div id="cards">
+                <h4>Other Payment Method</h4>
+                <div id="credit_card">
+                    <input type="radio" name="card">
+                    <p>Credit Card
+                    </p>
+                    <img src="https://st.redbus.in/paas/images/mobile/v2/visa.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/web/v2/maestro.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/mobile/v2/rupay.png" alt="">
+                </div>
+                <div id="debit_card">
+                    <input type="radio" name="card_wallet">
+                    <p>Debit Card
+                    </p>
+                    <img src="https://st.redbus.in/paas/images/mobile/v2/visa.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/web/v2/maestro.png" alt="">
+                    <img src="https://st.redbus.in/paas/images/mobile/v2/rupay.png" alt="">
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div id="right">
+
+            <div id="details">
+                <div id="one"></div>
+                <div id="two">
+                    <div id="left1"></div>
+                    <div id="right1"></div>
+                </div>
+                <div id="three">
+                    <div id="left2"></div>
+                    <div id="right2"></div>
+                </div>
+                <div id="four"></div>
+            </div>
+            <div id="breakup">
+                <h4>FARE BREAKUP</h4>
+                <div>
+                    <p>Onward Fare</p>
+                    <p id="price1"></p>
+                </div>
+                <div>
+                    <p>Coupon Discount</p>
+                    <p id="coupon_dis"></p>
+                </div>
+                <div>
+                    <p>Total Payble</p>
+                    <p id="price2"></p>
+                </div>
+            </div>
+            <div id="brands">
+                <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/master-card-secure-code.png" alt="">
+                <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/verified-by-visa.svg" alt="">
+                <img src="https://s3.rdbuz.com/Images/webplatform/Common/Payment/verisign-secured.png" alt="">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./Script/payment.js"></script>
