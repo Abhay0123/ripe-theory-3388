@@ -7,8 +7,13 @@
     <title>Online Bus Tickets Booking: Book Bus Ticket and Bus Reservation -redBus India</title>
     <link rel="stylesheet" href="busticket.css">
     <link rel="stylesheet" href="busticket.js">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- navbar -->
+    <div id="header"></div>
+    
+    <!-- tab bar -->
     <div id="tab_bar">
         <div><p>Home ></p></div>
         <div><p class="tab_bar">Bus Tickets</p></div>
@@ -194,7 +199,7 @@
 
     <!-- top routes -->
     <div id="Toproutes">
-        <div><h3>Top routes for booking bus tickets in India</h3></div>
+        <div><h3 style="margin-left: 400px;">Top routes for booking bus tickets in India</h3></div>
         <div id="toproutes1">
             <div>
                 <p>Bangalore To Hyderabad Bus</p>
@@ -274,6 +279,45 @@
     </div>
 </div>
 
+
+<!-- footer -->
+
+<div id="block5">
+    <div class="left-block">
+        <div class="footer-col">
+            <p class="footer-col-heading">About Redbus</p>
+            <ul class="footer-list">
+                <li><a class="footer-links" href="https://www.redbus.in/info/aboutus">About us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <p class="footer-col-heading">About Redbus</p>
+            <ul class="footer-list">
+                <li><a class="footer-links" href="https://www.redbus.in/info/termscondition">T&ampC</a></li>
+                <li><a class="footer-links" href="https://www.redbus.in/info/privacypolicy">Privacy Policy</a></li>
+                <li><div class="footer-links" onclick="faqClick()">FAQ</div></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-block">
+        <div style="display: inline;"><img src="https://s3.rdbuz.com/web/images/home/sgp/r_logo.png"></div>
+        <p class="footer-about">redBus is the world's largest online bus ticket booking service trusted by over 8
+            million happy customers globally. redBus offers bus ticket booking through its website,iOS and
+            Android mobile apps for all major routes.</p>
+        <p class="footer-about">Ⓒ 2021 ibibogroup All rights reserved</p>
+    </div>
+</div>
+
+
 </body>
 </html>
 
+<script type="module">
+
+import navbar from './components/navbar.js';
+
+let container = document.getElementById("header");
+
+container.innerHTML = navbar();
+
+</script>
