@@ -55,7 +55,6 @@ const busdata = [
 
 
 let travel = JSON.parse(localStorage.getItem("travelData:"))
-console.log(travel)
 
 let line = document.getElementById("fare")
 line.innerText = travel.from +" To " + travel.to

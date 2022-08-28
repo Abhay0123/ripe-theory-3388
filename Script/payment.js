@@ -1,4 +1,5 @@
 
+let travel = JSON.parse(localStorage.getItem("travelData:"))
 
 let ticket = JSON.parse(localStorage.getItem("ticket_data"))
 let user = JSON.parse(localStorage.getItem("user_data"))
@@ -13,7 +14,7 @@ document.getElementById("one").append(busname, bustype)
 let Depature = document.createElement("p")
 Depature.innerText = "Depature"
 let Depature1 = document.createElement("p")
-Depature1.innerText = "date"
+Depature1.innerText = travel.onwardDate
 let Depature2 = document.createElement("p")
 Depature2.innerText = ticket[0].Depature
 document.getElementById("left1").append(Depature, Depature1, Depature2)
@@ -27,7 +28,7 @@ document.getElementById("right1").append(Seat, Seat1)
 let pick = document.createElement("p")
 pick.innerText = "Boarding Point"
 let pick1 = document.createElement("p")
-pick1.innerText = "pick"
+pick1.innerText = travel.from
 let pick2 = document.createElement("p")
 pick2.innerText = ticket[0].pick
 document.getElementById("left2").append(pick, pick1, pick2)
@@ -35,7 +36,7 @@ document.getElementById("left2").append(pick, pick1, pick2)
 let drop = document.createElement("p")
 drop.innerText = "Dropping Point"
 let drop1 = document.createElement("p")
-drop1.innerText = "Drop"
+drop1.innerText = travel.to
 let drop2 = document.createElement("p")
 drop2.innerText = ticket[0].drop
 document.getElementById("right2").append(drop, drop1, drop2)
@@ -43,7 +44,7 @@ document.getElementById("right2").append(drop, drop1, drop2)
 let u1 = document.createElement("p")
 u1.innerText = ticket[0].Passenger_name
 let u2 = document.createElement("p")
-u2.innerText = `(${ticket[0].Passenger_age})`
+u2.innerText = `(Age : ${ticket[0].Passenger_age})`
 document.getElementById("four").append(u1, u2)
 
 
