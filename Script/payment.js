@@ -1,3 +1,5 @@
+
+
 let ticket = JSON.parse(localStorage.getItem("ticket_data"))
 let user = JSON.parse(localStorage.getItem("user_data"))
 console.log(ticket, user)

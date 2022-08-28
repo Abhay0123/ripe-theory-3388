@@ -1,3 +1,5 @@
+
+
 const busdata = [
     { busname: "Zingbus", bustype: "A/C Seater/Sleeper", Depature: "23:15", arrival: "04:05", pickup: "Dhaula kuan metro station", drop: "private bus stop", seats: 26, rating: "4.5", price: 620 },
     { busname: "Vikas Travels Jaipur", bustype: "A/C Seater/Sleeper", Depature: "20:45", arrival: "05:30", pickup: "Dhaula kuan metro station", drop: "private bus stop", seats: 26, rating: "4.2", price: 530 },
@@ -50,6 +52,13 @@ const busdata = [
     { busname: "Vijay Shakti Travels", bustype: "A/C Seater/Sleeper", Depature: "20:45", arrival: "05:30", pickup: "majnu ka teela", drop: "private bus stop", seats: 26, rating: "4.5", price: 754 },
     { busname: "Deepak Transport Company", bustype: "A/C Seater/Sleeper", Depature: "20:45", arrival: "05:30", pickup: "majnu ka teela", drop: "private bus stop", seats: 26, rating: "4.5", price: 856 },
 ]
+
+
+let travel = JSON.parse(localStorage.getItem("travelData:"))
+console.log(travel)
+
+let line = document.getElementById("fare")
+line.innerText = travel.from +" To " + travel.to
 showdata()
 function showdata(from, to, date) {
     document.getElementById("all_bus_data").innerHTML = null

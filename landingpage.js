@@ -16,6 +16,7 @@ function searchBtn() {
       onwardDate:onwardDate,
     };
     localStorage.setItem("travelData:",JSON.stringify(obj));
+    
    
 }
 
