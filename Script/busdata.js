@@ -112,7 +112,7 @@ function showdata(from, to, date) {
         }
 
         let date = document.createElement("p")
-        date.innerText = "27 Aug"
+        date.innerText = travel.onwardDate
 
         div1.append(busname, bustype)
         div2.append(Depature, pickup)
