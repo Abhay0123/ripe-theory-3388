@@ -1,62 +1,24 @@
+function navbar() {
+  return ` <div id="navba">
 
+  <div id='navba_left'><a href="index.html"><img src="https://www.redbus.in/bushire/static/webv2/home/logo-rb.svg" alt=""></a>
+      <p><a href="busdata.html">BUS TICKET</a></p>
+      <p><a href="rYde.html">rYde</a></p>
+      <p><a href="rPool.html">rPool</a></p>
 
-
-function navbar(){
-    return `<div id="headerBlock">
-      <article class="container">
-        <nav class="leftNav">
-          <section>
-            <div class="logo">
-            <a href="index.html"><img src="https://st.redbus.in/Images/redrail/r_logo.png" alt=""></a>
-            </div>
-            <div class="leftmenu">
-              <ul>
-                <li><a href="./homePage.html">BUS TICKETS</a></li>
-                <li>
-                  <a href="../rYde page/rYde.html" id="ryd">rYde<sup>new</sup></a>
-                </li>
-                <li><a href="../redrail page/redrail.html">redrail</a></li>
-              
-              </ul>
-            </div>
-          </section>
-        </nav>
-        <!----right side menu-->
-        <nav class="rightNav">
-          <ul>
-            <li><a href="#">Help</a></li>
-            <li>
-              <a href="#" id="dropup-menu-booking" >Manage booking
-              <span><i class="fas fa-chevron-down"></i> </span> 
-              </a>
-              <div class="dropdown-menu-booking">
-                <div>
-                  <a class="dropdown-item" href="PageCancelTicket.html">Cancel Ticket</a><br>
-                  <a class="dropdown-item" href="PageShowTicket.html">Show My Ticket</a><br>
-                  <a class="dropdown-item" href="#">Change Travel Date</a><br>
-                </div>
-              </div>
-             
-            </li>
-            
-            <li id="Signup">
-              <a href="#" id="dropup-menu" >
-                <span><i class="far fa-user-circle"></i></span>
-                <span><i class="fas fa-chevron-down after_user_circle"></i></span>
-              </a>
-              <div class="dropdown-menu">
-                <div class="drop">
-                <a class="dropdown-item" href="PageMytrip.html">MY Trips</a><br>
-                <a class="dropdown-item" href="PageWalletAndCard.html">Wallets</a><br>
-                <a class="dropdown-item" href="PageMyProfile.html">MY Profile</a><br>
-                <a class="dropdown-item" href="../../index.html">Sign Out</a><br>
-                </div>          
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </article>
-    </div>`;
+  </div>
+ <div id="navba_right">
+  <div>  <p>Manage Booking </p> <img src="https://www.redbus.in/bushire/static/webv2/home/2%20(6).svg" alt="">
+        
+   
+   </select>
+  </div>
+   <div> <p><img src="https://www.redbus.in/bushire/static/mwebv2/header/ic-user-not-logged-in.svg" alt="">
+      <img src="https://www.redbus.in/bushire/static/webv2/home/2%20(6).svg" alt="">   </p></div>
+      
+    
+ </div>
+</div>` ;
 }
 
 export default navbar;
